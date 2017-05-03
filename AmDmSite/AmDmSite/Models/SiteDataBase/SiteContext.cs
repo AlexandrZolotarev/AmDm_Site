@@ -10,7 +10,9 @@ namespace AmDmSite.Models.SiteDataBase
     {
         public SiteContext()
             :base("DbConnection")
-        { }
+        {
+
+        }
         public DbSet<Performer> Performers { get; set; }
         public DbSet<Song> Songs { get; set; }
         public DbSet<Accord> Accords { get; set; }

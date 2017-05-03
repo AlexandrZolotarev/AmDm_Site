@@ -1,4 +1,5 @@
-﻿using AmDmSite.Models.SiteDataBase;
+﻿using AmDmSite.HtmlParser;
+using AmDmSite.Models.SiteDataBase;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +12,12 @@ namespace AmDmSite.Controllers
     {
         public ActionResult Index()
         {
-            return View();
+            // This code only for test
+            List<Performer> p = HtmlAmDmParser.GetPerformersInfo(new List<Accord>(new SiteContext().Accords));
+            SiteContext s = new SiteContext();
+            s.Performers.Add(p[0]);
+            s.SaveChanges();
+            return View(new SiteContext().Performers);
         }
 
         public ActionResult About()

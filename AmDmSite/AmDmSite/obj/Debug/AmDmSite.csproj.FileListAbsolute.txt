@@ -178,3 +178,9 @@ D:\AmDm_Site\AmDmSite\AmDmSite\obj\Debug\AmDmSite.Migrations.InitialCreate.resou
 D:\AmDm_Site\AmDmSite\AmDmSite\obj\Debug\AmDmSite.csproj.GenerateResource.Cache
 D:\AmDm_Site\AmDmSite\AmDmSite\obj\Debug\AmDmSite.Migrations.Addedaccordsinsong.resources
 D:\AmDm_Site\AmDmSite\AmDmSite\obj\Debug\AmDmSite.Migrations.Addedsongsinaccords.resources
+D:\AmDm_Site\AmDmSite\AmDmSite\bin\HtmlAgilityPack.dll
+D:\AmDm_Site\AmDmSite\AmDmSite\bin\HtmlAgilityPack.pdb
+D:\AmDm_Site\AmDmSite\AmDmSite\bin\HtmlAgilityPack.xml
+D:\AmDm_Site\AmDmSite\AmDmSite\obj\Debug\AmDmSite.Migrations.PerformerPathToPgotoadded.resources
+D:\AmDm_Site\AmDmSite\AmDmSite\obj\Debug\AmDmSite.Migrations.PerformerViewsadded.resources
+D:\AmDm_Site\AmDmSite\AmDmSite\obj\Debug\AmDmSite.Migrations.songViewsadded.resources
