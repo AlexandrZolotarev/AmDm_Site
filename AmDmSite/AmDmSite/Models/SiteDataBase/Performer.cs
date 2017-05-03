@@ -11,5 +11,10 @@ namespace AmDmSite.Models.SiteDataBase
         public string Name { get; set; }
         public string Biography { get; set; }
         public List<Song> Songs { get; set; } 
+
+        public Performer()
+        {
+            Songs = new List<Song>();
+        }
     }
 }

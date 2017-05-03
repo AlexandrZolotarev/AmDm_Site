@@ -10,5 +10,10 @@ namespace AmDmSite.Models.SiteDataBase
         public int Id { get; set; }
         public string Name { get; set; }
         public string PathToPicture { get; set; }
+        public List<Song> Songs { get; set; }
+        public Accord()
+        {
+            Songs = new List<Song>();
+        }
     }
 }
