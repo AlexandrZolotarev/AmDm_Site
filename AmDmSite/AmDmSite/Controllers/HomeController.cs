@@ -40,5 +40,11 @@ namespace AmDmSite.Controllers
 
             return View();
         }
+
+        public ActionResult Performer(int performerId)
+        {
+            return View(new SiteContext().Performers.FirstOrDefault(x=>x.Id == performerId));
+        }
+
     }
 }

@@ -29,7 +29,8 @@
                     <a class="photo" id="photo"><img src=@performer.PathToPhoto title=@performer.Name width="33"> </a>
                 </td>
                 <td class="artist_name" id="name">
-                    <a href="//amdm.ru/akkordi/kino/" class="artist">@performer.Name</a>
+                    @(Html.ActionLink(performer.Name, "Performer", "Home", new { performerId = performer.Id }, null))
+                    @*<a href="//amdm.ru/akkordi/kino/" class="artist">@performer.Name</a>*@
                 </td>
                 <td class="number" id="counter">@performer.Songs.Count </td>
                 <td class="number" id="views">@performer.ViewsCount</td>

@@ -1,0 +1,44 @@
+﻿@using AmDmSite.Models.SiteDataBase
+@model Performer
+
+
+<style>
+    #counter {
+        width: 5%;
+        text-align: center;
+    }
+
+    #name {
+        width: 85%;
+    }
+
+    #views {
+        width: 5%;
+        text-align: center;
+    }
+</style>
+
+<h1>@Model.Name</h1>
+@if (Model.Biography != "")
+{
+<h3> Биография </h3>
+}
+<br />
+@Model.Biography
+<br />
+<div class="h1__info">Список композиций</div>
+<table class="items">
+    <thead><tr class="top_label"><th colspan="2">Композиция</th><th class="number">Просмотров</th></tr></thead>
+    <tbody>
+        @foreach (var song in Model.Songs)
+        {
+            <tr>
+                <td class="artist_name" id="name">
+
+                    <a href="//amdm.ru/akkordi/kino/" class="artist">@song.Name</a>
+                </td>
+                <td class="number" id="views">@song.ViewsCount</td>
+            </tr>
+        }
+    </tbody>
+</table>
