@@ -15,6 +15,8 @@ namespace AmDmSite.Controllers
         public ActionResult Index(int? page)
 
         {
+            //Comment strings must save, while update function did't create
+
             //List<Performer> p = HtmlAmDmParser.GetPerformersInfo(new List<Accord>(new SiteContext().Accords));
             SiteContext s = new SiteContext();
             //foreach (Performer performer in p)
@@ -30,32 +32,37 @@ namespace AmDmSite.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
-
             return View();
         }
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
-
             return View();
         }
 
         public ActionResult Performer(int performerId, int? page)
         {
-                Performer performer = new SiteContext().Performers.FirstOrDefault(x => x.Id == performerId);
-            ViewBag.PerformerName = performer.Name;
-            ViewBag.PerformerBiography = performer.Biography;
-            ViewBag.PerformerId = performerId;
+            using (SiteContext siteDataBase = new SiteContext())
+            {
+                Performer performer = siteDataBase.Performers.FirstOrDefault(x => x.Id == performerId);
+                ViewBag.PerformerName = performer.Name;
+                ViewBag.PerformerBiography = performer.Biography;
+                ViewBag.PerformerId = performerId;
+                performer.ViewsCount++;
+                siteDataBase.SaveChanges();
                 int pageSize = 10;
-                int pageNumber = (page ?? 1);
-                return View(performer.Songs.ToPagedList(pageNumber, pageSize));       
+                int pageNumber = (page ?? 1); 
+                return View(performer.Songs.ToPagedList(pageNumber, pageSize));
+            }      
         }
 
         public ActionResult Song(int songId)
         {
-            return View(new SiteContext().Songs.FirstOrDefault(x => x.Id == songId));
+            SiteContext siteDataBase = new SiteContext();
+            Song song = siteDataBase.Songs.FirstOrDefault(x => x.Id == songId);
+            song.ViewsCount++;
+            siteDataBase.SaveChanges();
+            return View(song);
         }
 
     }
