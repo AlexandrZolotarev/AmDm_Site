@@ -186,3 +186,7 @@ D:\AmDm_Site\AmDmSite\AmDmSite\obj\Debug\AmDmSite.Migrations.PerformerViewsadded
 D:\AmDm_Site\AmDmSite\AmDmSite\obj\Debug\AmDmSite.Migrations.songViewsadded.resources
 D:\AmDm_Site\AmDmSite\AmDmSite\obj\Debug\AmDmSite.Migrations.ApdatedataBasestructure.resources
 D:\AmDm_Site\AmDmSite\AmDmSite\obj\Debug\AmDmSite.Migrations.Updateaccordstructure.resources
+D:\AmDm_Site\AmDmSite\AmDmSite\bin\PagedList.dll
+D:\AmDm_Site\AmDmSite\AmDmSite\bin\PagedList.Mvc.dll
+D:\AmDm_Site\AmDmSite\AmDmSite\bin\PagedList.xml
+D:\AmDm_Site\AmDmSite\AmDmSite\bin\PagedList.Mvc.xml

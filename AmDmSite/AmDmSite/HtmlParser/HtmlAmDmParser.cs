@@ -31,7 +31,7 @@ namespace AmDmSite.HtmlParser
                 siteHtml.LoadHtml(str);
                 var rows = siteHtml.DocumentNode.SelectNodes(".//tr");
 
-                for (int i = 25; i <= 28; i++)
+                for (int i = 1; i <= 15; i++)
                 {
                     Performer performer = new Performer();
                     var image = rows[i].SelectNodes(".//img");
@@ -40,6 +40,7 @@ namespace AmDmSite.HtmlParser
                     performer.Songs = GetPerformerSongsInfo("https:" + rows[i].SelectNodes(".//a")[1].Attributes[0].Value, performer);
                     performer.Biography = biography;
                     performers.Add(performer);
+                    Console.WriteLine("Performer added "+performer.Name +", id:"+performer.Id);
                     Console.WriteLine();
                 }
             }
@@ -70,15 +71,16 @@ namespace AmDmSite.HtmlParser
             if (rows != null)
             {
                 //for (int i = 1; i < rows.Count - 5; i++)
-                int breaker = 5;
-                if (rows.Count < 5)
-                    breaker = rows.Count;
+                int breaker = 20;
+                if (rows.Count < 20)
+                    breaker = rows.Count-5;
 
                     for (int i = 1; i < breaker; i++)
                     {
                         Thread.Sleep(600);
                         if (rows[i].SelectNodes(".//a") != null)
                         {
+                        Console.Write("{"+i+"}");
                             Song song = new Song();
                             song.Name = rows[i].SelectNodes(".//a")[0].InnerText.Trim();
                             song = GetSongInfo("https:" + rows[i].SelectNodes(".//a")[0].Attributes[0].Value, song);

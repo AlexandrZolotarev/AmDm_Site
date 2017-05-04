@@ -1,6 +1,6 @@
 ﻿@using AmDmSite.Models.SiteDataBase
-@model Performer
-
+@model PagedList.IPagedList<AmDmSite.Models.SiteDataBase.Song>
+@using PagedList.Mvc;
 
 <style>
     #name {
@@ -13,19 +13,19 @@
     }
 </style>
 
-<h1>@Model.Name</h1>
-@if (Model.Biography != "")
+<h1>@ViewBag.PerformerName</h1>
+@if (ViewBag.PerformerBiography != "")
 {
 <h3> Биография </h3>
 }
 <br />
-@Model.Biography
+@ViewBag.PerformerBiography
 <br />
 <div class="h1__info">Список композиций</div>
 <table class="items">
     <thead><tr class="top_label"><th colspan="2">Композиция</th><th class="number">Просмотров</th></tr></thead>
     <tbody>
-        @foreach (var song in Model.Songs)
+        @foreach (var song in Model)
         {
             <tr>
                 <td class="artist_name" id="name">
@@ -36,3 +36,5 @@
         }
     </tbody>
 </table>
+
+@Html.PagedListPager(Model, page => Url.Action("Performer", new { ViewBag.PerformerId, page }))

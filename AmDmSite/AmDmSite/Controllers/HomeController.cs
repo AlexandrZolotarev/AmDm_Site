@@ -1,5 +1,6 @@
 ﻿using AmDmSite.HtmlParser;
 using AmDmSite.Models.SiteDataBase;
+using PagedList;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,21 +11,21 @@ namespace AmDmSite.Controllers
 {
     public class HomeController : Controller
     {
-        public ActionResult Index()
-        {
-            // This code only for test parsing && save time on testing
 
+        public ActionResult Index(int? page)
+
+        {
             //List<Performer> p = HtmlAmDmParser.GetPerformersInfo(new List<Accord>(new SiteContext().Accords));
             SiteContext s = new SiteContext();
-            //s.Performers.Add(new Performer { Name = "Test", Biography = "sfs", ViewsCount = 124 });
-            //s.SaveChanges();
             //foreach (Performer performer in p)
             //{
             //    s.Performers.Add(performer);
             //}
             //s.SaveChanges();
             List<Performer> performers = new List<Performer>(s.Performers);
-            return View(performers);
+            int pageSize = 10;
+            int pageNumber = (page ?? 1);
+            return View(performers.ToPagedList(pageNumber, pageSize));
         }
 
         public ActionResult About()
@@ -41,9 +42,15 @@ namespace AmDmSite.Controllers
             return View();
         }
 
-        public ActionResult Performer(int performerId)
+        public ActionResult Performer(int performerId, int? page)
         {
-            return View(new SiteContext().Performers.FirstOrDefault(x=>x.Id == performerId));
+                Performer performer = new SiteContext().Performers.FirstOrDefault(x => x.Id == performerId);
+            ViewBag.PerformerName = performer.Name;
+            ViewBag.PerformerBiography = performer.Biography;
+            ViewBag.PerformerId = performerId;
+                int pageSize = 10;
+                int pageNumber = (page ?? 1);
+                return View(performer.Songs.ToPagedList(pageNumber, pageSize));       
         }
 
         public ActionResult Song(int songId)
