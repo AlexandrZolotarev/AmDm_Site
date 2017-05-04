@@ -30,7 +30,6 @@
                 </td>
                 <td class="artist_name" id="name">
                     @(Html.ActionLink(performer.Name, "Performer", "Home", new { performerId = performer.Id }, null))
-                    @*<a href="//amdm.ru/akkordi/kino/" class="artist">@performer.Name</a>*@
                 </td>
                 <td class="number" id="counter">@performer.Songs.Count </td>
                 <td class="number" id="views">@performer.ViewsCount</td>

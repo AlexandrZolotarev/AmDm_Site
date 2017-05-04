@@ -3,17 +3,12 @@
 
 
 <style>
-    #counter {
-        width: 5%;
-        text-align: center;
-    }
-
     #name {
         width: 85%;
     }
 
     #views {
-        width: 5%;
+        width: 15%;
         text-align: center;
     }
 </style>
@@ -34,8 +29,7 @@
         {
             <tr>
                 <td class="artist_name" id="name">
-
-                    <a href="//amdm.ru/akkordi/kino/" class="artist">@song.Name</a>
+                    @(Html.ActionLink(song.Name, "Song", "Home", new { songId = song.Id }, null))
                 </td>
                 <td class="number" id="views">@song.ViewsCount</td>
             </tr>

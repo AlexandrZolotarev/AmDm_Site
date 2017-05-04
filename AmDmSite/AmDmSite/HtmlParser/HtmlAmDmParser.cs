@@ -34,7 +34,6 @@ namespace AmDmSite.HtmlParser
                 for (int i = 25; i <= 28; i++)
                 {
                     Performer performer = new Performer();
-
                     var image = rows[i].SelectNodes(".//img");
                     performer.PathToPhoto = image[0].Attributes[0].Value;
                     performer.Name = rows[i].SelectNodes(".//a")[1].InnerText.Trim();

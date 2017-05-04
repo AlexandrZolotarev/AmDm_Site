@@ -46,5 +46,10 @@ namespace AmDmSite.Controllers
             return View(new SiteContext().Performers.FirstOrDefault(x=>x.Id == performerId));
         }
 
+        public ActionResult Song(int songId)
+        {
+            return View(new SiteContext().Songs.FirstOrDefault(x => x.Id == songId));
+        }
+
     }
 }

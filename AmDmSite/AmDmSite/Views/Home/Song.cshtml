@@ -1,0 +1,25 @@
+﻿@using AmDmSite.Models.SiteDataBase
+@model Song
+<style>
+
+</style>
+
+<h1>@Model.Performer.Name - @Model.Name</h1>
+<div class="h2__info">Текст:</div>
+<div class="text">
+    @Model.Text
+</div>
+<table class="items">
+    <thead><tr class="top_label"><th colspan="2">Аккорды</th></tr></thead>
+    <tbody>
+       
+            <tr>
+@foreach (var accord in Model.Accords)
+{
+                <td class="photo">
+                    <a class="photo" id="photo"><img src=@accord.PathToPicture title=@accord.Name width="60"> </a>
+                </td>
+}
+            </tr>
+    </tbody>
+</table>
