@@ -1,25 +1,37 @@
 ﻿@using AmDmSite.Models.SiteDataBase
 @model Song
 <style>
+    .Accords{
+        list-style-type: none;
+    }
 
+    .Accords li{
+        display: inline-block;
+    }
 </style>
 
 <h1>@Model.Performer.Name - @Model.Name</h1>
-<div class="h2__info">Текст:</div>
-<div class="text">
+<div class="row">
+    <div class="col-md-8">
+        <div class="h2__info">Текст:</div>
+        <div class="text">
+            <pre>
     @Model.Text
+</pre>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <h2>Аппликатуры аккордов</h2>
+        <ul class="Accords">
+            @foreach (var accord in Model.Accords)
+            {
+                <li>
+                    <a class="photo" id="photo"><img src=@accord.PathToPicture title=@accord.Name width="80"> </a>
+                </li>
+            }
+
+        </ul>
+    </div>
 </div>
-<table class="items">
-    <thead><tr class="top_label"><th colspan="2">Аккорды</th></tr></thead>
-    <tbody>
-       
-            <tr>
-@foreach (var accord in Model.Accords)
-{
-                <td class="photo">
-                    <a class="photo" id="photo"><img src=@accord.PathToPicture title=@accord.Name width="60"> </a>
-                </td>
-}
-            </tr>
-    </tbody>
-</table>
+
+
