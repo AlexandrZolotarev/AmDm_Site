@@ -9,8 +9,8 @@ namespace AmDmSite.Models.SiteDataBase
     public class SiteContext : DbContext
     {
         public SiteContext()
-            :base("DbConnection")
-        {
+: base("DbConnection")
+        {
 
         }
         public DbSet<Performer> Performers { get; set; }

@@ -11,7 +11,7 @@ namespace AmDmSite.Models.SiteDataBase
         public string Name { get; set; }
         public string Biography { get; set; }
         public string PathToPhoto { get; set; }
-        public List<Song> Songs { get; set; }
+        public virtual ICollection<Song> Songs { get; set; }
         public int ViewsCount { get; set; }
         public Performer()
         {

@@ -184,3 +184,5 @@ D:\AmDm_Site\AmDmSite\AmDmSite\bin\HtmlAgilityPack.xml
 D:\AmDm_Site\AmDmSite\AmDmSite\obj\Debug\AmDmSite.Migrations.PerformerPathToPgotoadded.resources
 D:\AmDm_Site\AmDmSite\AmDmSite\obj\Debug\AmDmSite.Migrations.PerformerViewsadded.resources
 D:\AmDm_Site\AmDmSite\AmDmSite\obj\Debug\AmDmSite.Migrations.songViewsadded.resources
+D:\AmDm_Site\AmDmSite\AmDmSite\obj\Debug\AmDmSite.Migrations.ApdatedataBasestructure.resources
+D:\AmDm_Site\AmDmSite\AmDmSite\obj\Debug\AmDmSite.Migrations.Updateaccordstructure.resources

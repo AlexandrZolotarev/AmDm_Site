@@ -202,6 +202,14 @@
     <Compile Include="Migrations\201705031530569_song Views added.Designer.cs">
       <DependentUpon>201705031530569_song Views added.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201705041414234_Apdate dataBase structure.cs" />
+    <Compile Include="Migrations\201705041414234_Apdate dataBase structure.Designer.cs">
+      <DependentUpon>201705041414234_Apdate dataBase structure.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705041422270_Update accord structure.cs" />
+    <Compile Include="Migrations\201705041422270_Update accord structure.Designer.cs">
+      <DependentUpon>201705041422270_Update accord structure.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -298,6 +306,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201705031530569_song Views added.resx">
       <DependentUpon>201705031530569_song Views added.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705041414234_Apdate dataBase structure.resx">
+      <DependentUpon>201705041414234_Apdate dataBase structure.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705041422270_Update accord structure.resx">
+      <DependentUpon>201705041422270_Update accord structure.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

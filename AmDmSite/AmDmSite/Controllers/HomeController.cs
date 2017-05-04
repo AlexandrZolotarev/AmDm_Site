@@ -12,12 +12,19 @@ namespace AmDmSite.Controllers
     {
         public ActionResult Index()
         {
-            // This code only for test
-            List<Performer> p = HtmlAmDmParser.GetPerformersInfo(new List<Accord>(new SiteContext().Accords));
+            // This code only for test parsing && save time on testing
+
+            //List<Performer> p = HtmlAmDmParser.GetPerformersInfo(new List<Accord>(new SiteContext().Accords));
             SiteContext s = new SiteContext();
-            s.Performers.Add(p[0]);
-            s.SaveChanges();
-            return View(new SiteContext().Performers);
+            //s.Performers.Add(new Performer { Name = "Test", Biography = "sfs", ViewsCount = 124 });
+            //s.SaveChanges();
+            //foreach (Performer performer in p)
+            //{
+            //    s.Performers.Add(performer);
+            //}
+            //s.SaveChanges();
+            List<Performer> performers = new List<Performer>(s.Performers);
+            return View(performers);
         }
 
         public ActionResult About()
