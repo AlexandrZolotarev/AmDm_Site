@@ -12,6 +12,7 @@ namespace AmDmSite.Models.SiteDataBase
         public string Text { get; set; }
         public int ViewsCount { get; set; }
         public int? PerformerId { get; set; }
+        public int Number { get; set; }
         public virtual Performer Performer { get; set; }
         public virtual ICollection<Accord> Accords { get; set; }
         public Song()

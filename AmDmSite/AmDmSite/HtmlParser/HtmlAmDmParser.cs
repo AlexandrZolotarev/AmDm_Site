@@ -15,40 +15,39 @@ namespace AmDmSite.HtmlParser
         static string biography;
         public static List<Accord> accords = new List<Accord>();
 
-        public static List<Performer> GetPerformersInfo(List<Accord> accordsCollection)
+        public static void GetPerformersInfo()
         {
-            accords = accordsCollection;
-            List<Performer> performers = new List<Performer>();
-
+            using (SiteContext s = new SiteContext()) { 
+                accords = new List<Accord>(s.Accords);
             System.Net.WebClient web = new System.Net.WebClient();
             web.Encoding = UTF8Encoding.UTF8;
-            for (int page = 1; page <= 1; page++)
-            {
-                string str = web.DownloadString($"https://amdm.ru/chords/page" + page + "/");
-                str = HttpUtility.HtmlDecode(str);
-
-                HtmlDocument siteHtml = new HtmlDocument();
-                siteHtml.LoadHtml(str);
-                var rows = siteHtml.DocumentNode.SelectNodes(".//tr");
-
-                for (int i = 1; i <= 15; i++)
+                // for (int page = 1; page <= 10; page++)
+                for (int page = 1; page <= 1; page++)
                 {
-                    Performer performer = new Performer();
-                    var image = rows[i].SelectNodes(".//img");
-                    performer.PathToPhoto = image[0].Attributes[0].Value;
-                    performer.Name = rows[i].SelectNodes(".//a")[1].InnerText.Trim();
-                    performer.Songs = GetPerformerSongsInfo("https:" + rows[i].SelectNodes(".//a")[1].Attributes[0].Value, performer);
-                    performer.Biography = biography;
-                    performers.Add(performer);
-                    Console.WriteLine("Performer added "+performer.Name +", id:"+performer.Id);
-                    Console.WriteLine();
+                    string str = web.DownloadString($"https://amdm.ru/chords/page" + page + "/");
+                    str = HttpUtility.HtmlDecode(str);
+
+                    HtmlDocument siteHtml = new HtmlDocument();
+                    siteHtml.LoadHtml(str);
+                    var rows = siteHtml.DocumentNode.SelectNodes(".//tr");
+
+                   // for (int i = 1; i <= 30; i++)
+                        for (int i = 1; i <= 3; i++)
+                        {
+                        Performer performer = new Performer();
+                        var image = rows[i].SelectNodes(".//img");
+                        performer.PathToPhoto = image[0].Attributes[0].Value;
+                        performer.Name = rows[i].SelectNodes(".//a")[1].InnerText.Trim();
+                        performer.Songs = GetPerformerSongsInfo("https:" + rows[i].SelectNodes(".//a")[1].Attributes[0].Value);
+                        performer.Biography = biography;
+                        s.Performers.Add(performer);
+                        s.SaveChanges();
+                    }
                 }
             }
-            return performers;
-
         }
 
-        public static List<Song> GetPerformerSongsInfo(string linkToSongs, Performer performer)
+        public static List<Song> GetPerformerSongsInfo(string linkToSongs)
         {
             List<Song> songs = new List<Song>();
             System.Net.WebClient web = new System.Net.WebClient();
@@ -71,23 +70,26 @@ namespace AmDmSite.HtmlParser
             if (rows != null)
             {
                 //for (int i = 1; i < rows.Count - 5; i++)
-                int breaker = 20;
-                if (rows.Count < 20)
-                    breaker = rows.Count-5;
+                int breaker = 8;
+                if (rows.Count < 8)
+                    breaker = rows.Count;
 
-                    for (int i = 1; i < breaker; i++)
+                for (int i = 1; i < breaker; i++)
+                {
+                    Thread.Sleep(800);
+                    if (rows[i].SelectNodes(".//a") != null)
                     {
-                        Thread.Sleep(600);
-                        if (rows[i].SelectNodes(".//a") != null)
+                        if (rows[i].SelectNodes(".//a")[0].Attributes[1].Value.Equals("g-link"))
                         {
-                        Console.Write("{"+i+"}");
                             Song song = new Song();
                             song.Name = rows[i].SelectNodes(".//a")[0].InnerText.Trim();
                             song = GetSongInfo("https:" + rows[i].SelectNodes(".//a")[0].Attributes[0].Value, song);
                             Console.WriteLine("_________________________________________");
+                            song.Number = i;
                             songs.Add(song);
                         }
                     }
+                }
             }
             return songs;
         }

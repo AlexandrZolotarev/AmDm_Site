@@ -1,17 +1,39 @@
 ﻿@using AmDmSite.Models.SiteDataBase
 @model Song
+
 <style>
     .Accords{
         list-style-type: none;
+    }
+
+    .priviousButton{
+        float: left;
+    }
+
+    .nextButton{
+        float: right;
     }
 
     .Accords li{
         display: inline-block;
     }
 </style>
+<div id="songInfo">
+    <h1>@Model.Performer.Name - @Model.Name</h1>
+    <div class="col-md-6 priviousButton">
+        @if (ViewBag.PreviousSong != -1)
+        {
+            @(Ajax.ActionLink("Назад", "SongInfo", "Home", new { performerId = Model.PerformerId, songNumber = ViewBag.PreviousSong }, new AjaxOptions { UpdateTargetId = "songInfo" }))
+        }
+    </div>
 
-<h1>@Model.Performer.Name - @Model.Name</h1>
-<div class="row">
+    <div class="col-md-6 priviousButton">
+        @if (ViewBag.NextSong != -1)
+        {
+            @(Ajax.ActionLink("Вперед", "SongInfo", "Home", new { performerId = Model.PerformerId, songNumber = ViewBag.NextSong }, new AjaxOptions { UpdateTargetId = "songInfo" }))
+        }
+    </div>
+
     <div class="col-md-8">
         <div class="h2__info">Текст:</div>
         <div class="text">
@@ -33,4 +55,3 @@
         </ul>
     </div>
 </div>
-

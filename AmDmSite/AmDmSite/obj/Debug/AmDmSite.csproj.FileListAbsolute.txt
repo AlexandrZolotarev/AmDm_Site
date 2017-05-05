@@ -190,3 +190,4 @@ D:\AmDm_Site\AmDmSite\AmDmSite\bin\PagedList.dll
 D:\AmDm_Site\AmDmSite\AmDmSite\bin\PagedList.Mvc.dll
 D:\AmDm_Site\AmDmSite\AmDmSite\bin\PagedList.xml
 D:\AmDm_Site\AmDmSite\AmDmSite\bin\PagedList.Mvc.xml
+D:\AmDm_Site\AmDmSite\AmDmSite\obj\Debug\AmDmSite.Migrations.Numberofsongaddedinsong.resources
