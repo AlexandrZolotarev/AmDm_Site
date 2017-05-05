@@ -1,1 +1,42 @@
-﻿
+﻿@model IEnumerable<AmDmSite.Models.SiteDataBase.Performer>
+@using PagedList.Mvc;
+                      <table class="tableBody">
+                          <thead>
+                              <tr class="top_label">
+                                  <th colspan="2">
+                                      Исполнитель <a class="btn-default" onclick="openStep()">
+                                          <span class="glyphicon glyphicon-arrow-down">
+                                          </span>
+                                      </a>
+                                  </th>
+                                  <th class="number">
+                                      Песен
+                                     
+                                  </th>
+                                  <th class="number">
+                                      Просмотров
+                                      <a class="btn-default" onclick="openStep()">
+                                          <span class="glyphicon glyphicon-arrow-down">
+                                          </span>
+                                      </a>
+                                  </th>
+
+
+                              </tr>
+                          </thead>
+                          <tbody>
+                              @foreach (var performer in Model)
+                              {
+                                  <tr>
+                                      <td class="photo">
+                                          <a class="photo" id="photo"><img src=@performer.PathToPhoto title=@performer.Name width="33"> </a>
+                                      </td>
+                                      <td class="artist_name" id="name">
+                                          @(Html.ActionLink(performer.Name, "Performer", "Home", new { performerId = performer.Id }, null))
+                                      </td>
+                                      <td class="number" id="counter">@performer.Songs.Count </td>
+                                      <td class="number" id="views">@performer.ViewsCount</td>
+                                  </tr>
+                              }
+                          </tbody>
+                      </table>

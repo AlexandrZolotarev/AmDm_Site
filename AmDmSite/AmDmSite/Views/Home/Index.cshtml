@@ -19,25 +19,17 @@
 
 <h1>Исполнители</h1>
 <div class="h1__info">Исполнители и самые просматриваемые композиции. Данные по статистике просмотров за неделю.</div>
-<table class="items">
+<table class="tableBody">
     <thead><tr class="top_label">
-        <th colspan="2">Исполнитель <a class="btn-default" onclick="openStep()">
-    <span class="glyphicon glyphicon-arrow-down">
-    </span>
-</a></th>
+        <th colspan="2">Исполнитель 
+            @(Html.ActionLink("A-z", "Index", "Home", new { ViewBag.Page, column = 1, typeAscending = ViewBag.NameType }, null))
+        </th>
                <th class="number">Песен
-        
-                   <a class="btn-default" onclick="openStep()">
-                       <span class="glyphicon glyphicon-arrow-down">
-                       </span>
-                   </a>
-        
+                   @(Html.ActionLink("⇅", "Index", "Home", new { ViewBag.Page, column = 2, typeAscending = ViewBag.SongsType }, null))
+                   
         </th>
         <th class="number">Просмотров
-            <a class="btn-default" onclick="openStep()">
-                <span class="glyphicon glyphicon-arrow-down">
-                </span>
-            </a>
+            @(Html.ActionLink("⇅", "Index", "Home", new { ViewBag.Page, column = 3, typeAscending = ViewBag.ViewsCountType }, null))
         </th>
 
 
@@ -58,6 +50,6 @@
             </tr>
         }
     </tbody>
-</table>
+    </table>
 <br />
 @Html.PagedListPager(Model, page => Url.Action("Index", new { page }))

@@ -12,7 +12,7 @@ namespace AmDmSite.Controllers
     public class HomeController : Controller
     {
 
-        public ActionResult Index(int? page)
+        public ActionResult Index(int? page, int? column, int? typeAscending)
 
         {
             //Comment strings must save, while update function did't create
@@ -22,7 +22,54 @@ namespace AmDmSite.Controllers
             List<Performer> performers = new List<Performer>(s.Performers);
             int pageSize = 10;
             int pageNumber = (page ?? 1);
-            return View(performers.OrderBy(x => x.Name).ToPagedList(pageNumber, pageSize));
+            int colNumber = (column ?? 0);
+            int ascendType = (typeAscending ?? -1);
+
+            ViewBag.Page = pageNumber;
+            ViewBag.NameType = 0;
+            ViewBag.SongsType = 0;
+            ViewBag.ViewsCountType = 0;
+
+            if (ascendType == -1)
+                return View(performers.ToPagedList(pageNumber, pageSize));
+
+            switch (column)
+            {
+                case 1:
+                    if (ascendType == 0)
+                    {
+                        ViewBag.NameType = 1;
+                        return View(performers.OrderBy(x => x.Name).ToPagedList(pageNumber, pageSize));
+                    }
+                    else
+                    {
+                        ViewBag.NameType = 0;
+                        return View(performers.OrderByDescending(x => x.Name).ToPagedList(pageNumber, pageSize));
+                    }
+                case 2:
+                    if (ascendType == 0)
+                    {
+                        ViewBag.SongsType = 1;
+                        return View(performers.OrderBy(x => x.Songs.Count).ToPagedList(pageNumber, pageSize));
+                    }
+                    else {
+                        ViewBag.SongsType = 0;
+                        return View(performers.OrderByDescending(x => x.Songs.Count).ToPagedList(pageNumber, pageSize));
+            }
+                case 3:
+
+                    if (ascendType == 0)
+                    {
+                        ViewBag.ViewsCountType = 1;
+                        return View(performers.OrderBy(x => x.ViewsCount).ToPagedList(pageNumber, pageSize));
+                    }
+                    else
+                    {
+                        ViewBag.ViewsCountType = 0;
+                        return View(performers.OrderByDescending(x => x.ViewsCount).ToPagedList(pageNumber, pageSize));
+                    }
+                default: return View(performers.ToPagedList(pageNumber, pageSize));
+            }
         }
 
         public ActionResult About()
@@ -45,7 +92,7 @@ namespace AmDmSite.Controllers
                 ViewBag.PerformerId = performerId;
                 performer.ViewsCount++;
                 siteDataBase.SaveChanges();
-               
+
                 int pageSize = 10;
                 int pageNumber = (page ?? 1);
                 return View(performer.Songs.ToPagedList(pageNumber, pageSize));
