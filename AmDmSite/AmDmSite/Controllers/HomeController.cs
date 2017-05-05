@@ -17,12 +17,12 @@ namespace AmDmSite.Controllers
         {
             //Comment strings must save, while update function did't create
 
-            // HtmlAmDmParser.GetPerformersInfo();
+            //HtmlAmDmParser.GetPerformersInfo();
             SiteContext s = new SiteContext();
             List<Performer> performers = new List<Performer>(s.Performers);
             int pageSize = 10;
             int pageNumber = (page ?? 1);
-            return View(performers.ToPagedList(pageNumber, pageSize));
+            return View(performers.OrderBy(x => x.Name).ToPagedList(pageNumber, pageSize));
         }
 
         public ActionResult About()
@@ -45,6 +45,7 @@ namespace AmDmSite.Controllers
                 ViewBag.PerformerId = performerId;
                 performer.ViewsCount++;
                 siteDataBase.SaveChanges();
+               
                 int pageSize = 10;
                 int pageNumber = (page ?? 1);
                 return View(performer.Songs.ToPagedList(pageNumber, pageSize));
@@ -59,7 +60,7 @@ namespace AmDmSite.Controllers
             song.ViewsCount++;
             siteDataBase.SaveChanges();
             ViewBag.NextSong = performer.Songs.Count > song.Number + 1 ? song.Number + 1 : -1;
-            ViewBag.PreviousSong = song.Number > 0 ? song.Number - 1 : -1;
+            ViewBag.PreviousSong = song.Number > 1 ? song.Number - 1 : -1;
             return View(song);
         }
 
@@ -72,22 +73,8 @@ namespace AmDmSite.Controllers
             song.ViewsCount++;
             siteDataBase.SaveChanges();
             ViewBag.NextSong = performer.Songs.Count > song.Number + 1 ? song.Number + 1 : -1;
-            ViewBag.PreviousSong = song.Number > 0 ? song.Number - 1 : -1;
+            ViewBag.PreviousSong = song.Number > 1 ? song.Number - 1 : -1;
             return PartialView(song);
         }
-
-        public ActionResult InfoSong(int performerId, int songNumber)
-        {
-            bool check = Request.IsAjaxRequest();
-            SiteContext siteDataBase = new SiteContext();
-            Performer performer = siteDataBase.Performers.FirstOrDefault(x => x.Id == performerId);
-            Song song = performer.Songs.FirstOrDefault(x => x.Number == songNumber);
-            song.ViewsCount++;
-            siteDataBase.SaveChanges();
-            ViewBag.NextSong = performer.Songs.Count > song.Number + 1 ? song.Number + 1 : -1;
-            ViewBag.PreviousSong = song.Number > 0 ? song.Number - 1 : -1;
-            return PartialView(song);
-        }
-
     }
 }

@@ -17,7 +17,10 @@ namespace AmDmSite.HtmlParser
 
         public static void GetPerformersInfo()
         {
-            using (SiteContext s = new SiteContext()) { 
+            using (SiteContext s = new SiteContext()) {
+                s.Songs.RemoveRange(s.Songs);
+                s.Performers.RemoveRange(s.Performers);
+                s.SaveChanges();
                 accords = new List<Accord>(s.Accords);
             System.Net.WebClient web = new System.Net.WebClient();
             web.Encoding = UTF8Encoding.UTF8;
@@ -32,7 +35,7 @@ namespace AmDmSite.HtmlParser
                     var rows = siteHtml.DocumentNode.SelectNodes(".//tr");
 
                    // for (int i = 1; i <= 30; i++)
-                        for (int i = 1; i <= 3; i++)
+                        for (int i = 1; i <= 20; i++)
                         {
                         Performer performer = new Performer();
                         var image = rows[i].SelectNodes(".//img");
@@ -70,8 +73,8 @@ namespace AmDmSite.HtmlParser
             if (rows != null)
             {
                 //for (int i = 1; i < rows.Count - 5; i++)
-                int breaker = 8;
-                if (rows.Count < 8)
+                int breaker = 15;
+                if (rows.Count <= 15)
                     breaker = rows.Count;
 
                 for (int i = 1; i < breaker; i++)

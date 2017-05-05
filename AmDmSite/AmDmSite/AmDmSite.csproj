@@ -186,42 +186,6 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="HtmlParser\HtmlAmDmParser.cs" />
-    <Compile Include="Migrations\201705031125390_InitialCreate.cs" />
-    <Compile Include="Migrations\201705031125390_InitialCreate.Designer.cs">
-      <DependentUpon>201705031125390_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201705031132321_Added accords in song.cs" />
-    <Compile Include="Migrations\201705031132321_Added accords in song.Designer.cs">
-      <DependentUpon>201705031132321_Added accords in song.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201705031137241_Added songs in accords.cs" />
-    <Compile Include="Migrations\201705031137241_Added songs in accords.Designer.cs">
-      <DependentUpon>201705031137241_Added songs in accords.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201705031512508_Performer PathToPgoto added.cs" />
-    <Compile Include="Migrations\201705031512508_Performer PathToPgoto added.Designer.cs">
-      <DependentUpon>201705031512508_Performer PathToPgoto added.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201705031530030_Performer Views added.cs" />
-    <Compile Include="Migrations\201705031530030_Performer Views added.Designer.cs">
-      <DependentUpon>201705031530030_Performer Views added.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201705031530569_song Views added.cs" />
-    <Compile Include="Migrations\201705031530569_song Views added.Designer.cs">
-      <DependentUpon>201705031530569_song Views added.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201705041414234_Apdate dataBase structure.cs" />
-    <Compile Include="Migrations\201705041414234_Apdate dataBase structure.Designer.cs">
-      <DependentUpon>201705041414234_Apdate dataBase structure.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201705041422270_Update accord structure.cs" />
-    <Compile Include="Migrations\201705041422270_Update accord structure.Designer.cs">
-      <DependentUpon>201705041422270_Update accord structure.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201705051534441_Number of song added in song.cs" />
-    <Compile Include="Migrations\201705051534441_Number of song added in song.Designer.cs">
-      <DependentUpon>201705051534441_Number of song added in song.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -296,6 +260,7 @@
     <Content Include="Views\Home\Song.cshtml" />
     <Content Include="Views\Home\SongInfo.cshtml" />
     <Content Include="Views\Home\InfoSong.cshtml" />
+    <Content Include="Views\Home\PerformerTable.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -307,35 +272,6 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201705031125390_InitialCreate.resx">
-      <DependentUpon>201705031125390_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201705031132321_Added accords in song.resx">
-      <DependentUpon>201705031132321_Added accords in song.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201705031137241_Added songs in accords.resx">
-      <DependentUpon>201705031137241_Added songs in accords.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201705031512508_Performer PathToPgoto added.resx">
-      <DependentUpon>201705031512508_Performer PathToPgoto added.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201705031530030_Performer Views added.resx">
-      <DependentUpon>201705031530030_Performer Views added.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201705031530569_song Views added.resx">
-      <DependentUpon>201705031530569_song Views added.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201705041414234_Apdate dataBase structure.resx">
-      <DependentUpon>201705041414234_Apdate dataBase structure.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201705041422270_Update accord structure.resx">
-      <DependentUpon>201705041422270_Update accord structure.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201705051534441_Number of song added in song.resx">
-      <DependentUpon>201705051534441_Number of song added in song.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

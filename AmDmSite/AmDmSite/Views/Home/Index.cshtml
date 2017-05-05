@@ -3,16 +3,16 @@
 
 <style>
     #counter {
-        width: 5%;  
+        width: 10%;  
         text-align: center;
     }
 
     #name {
-         width: 85%;   
+         width: 75%;   
     }
 
     #views {
-            width: 5%;  
+            width: 10%;  
             text-align: center;
             }
 </style>
@@ -20,7 +20,29 @@
 <h1>Исполнители</h1>
 <div class="h1__info">Исполнители и самые просматриваемые композиции. Данные по статистике просмотров за неделю.</div>
 <table class="items">
-    <thead><tr class="top_label"><th colspan="2">Исполнитель</th><th class="number">Песен</th><th class="number">Просмотров</th></tr></thead>
+    <thead><tr class="top_label">
+        <th colspan="2">Исполнитель <a class="btn-default" onclick="openStep()">
+    <span class="glyphicon glyphicon-arrow-down">
+    </span>
+</a></th>
+               <th class="number">Песен
+        
+                   <a class="btn-default" onclick="openStep()">
+                       <span class="glyphicon glyphicon-arrow-down">
+                       </span>
+                   </a>
+        
+        </th>
+        <th class="number">Просмотров
+            <a class="btn-default" onclick="openStep()">
+                <span class="glyphicon glyphicon-arrow-down">
+                </span>
+            </a>
+        </th>
+
+
+        </tr>
+    </thead>
     <tbody>
         @foreach (var performer in Model)
         {
