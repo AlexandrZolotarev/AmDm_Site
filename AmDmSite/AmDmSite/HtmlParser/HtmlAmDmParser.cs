@@ -24,7 +24,7 @@ namespace AmDmSite.HtmlParser
                 accords = new List<Accord>(s.Accords);
             System.Net.WebClient web = new System.Net.WebClient();
             web.Encoding = UTF8Encoding.UTF8;
-               for (int page = 1; page <= 10; page++)
+               for (int page = 0; page <= 10; page++)
                 //for (int page = 1; page <= 1; page++)
                 {
                     string str = web.DownloadString($"https://amdm.ru/chords/page" + page + "/");
@@ -34,7 +34,7 @@ namespace AmDmSite.HtmlParser
                     siteHtml.LoadHtml(str);
                     var rows = siteHtml.DocumentNode.SelectNodes(".//tr");
 
-                    for (int i = 1; i <= 30; i++)
+                    for (int i = 2; i <= 30; i++)
                     {
                         //for (int i = 1; i <= 20; i++)
                         try
@@ -51,7 +51,7 @@ namespace AmDmSite.HtmlParser
                                 s.SaveChanges();
                             }
                         }
-                        finally { }
+                        catch { }
                     }
                 }
             }
@@ -98,7 +98,7 @@ namespace AmDmSite.HtmlParser
                             }
                         }
                     }
-                    finally { }
+                    catch { }
                 }
             }
             return songs;

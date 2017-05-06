@@ -16,7 +16,7 @@ namespace AmDmSite.Controllers
         public ActionResult Index(int? page, int? column, int? typeAscending)
 
         {
-          //  HtmlAmDmParser.GetPerformersInfo();
+         // HtmlAmDmParser.GetPerformersInfo();
             SiteContext s = new SiteContext();
             List<Performer> performers = new List<Performer>(s.Performers);
             int pageSize = 10;
@@ -114,7 +114,6 @@ namespace AmDmSite.Controllers
         [OutputCache(Duration = 30, Location = OutputCacheLocation.Downstream)]
         public ActionResult SongInfo(int performerId, int songNumber)
         {
-            bool check = Request.IsAjaxRequest();
             SiteContext siteDataBase = new SiteContext();
             Performer performer = siteDataBase.Performers.FirstOrDefault(x => x.Id == performerId);
             Song song = performer.Songs.FirstOrDefault(x => x.Number == songNumber);
@@ -123,6 +122,17 @@ namespace AmDmSite.Controllers
             ViewBag.NextSong = performer.Songs.Count > song.Number + 1 ? song.Number + 1 : -1;
             ViewBag.PreviousSong = song.Number > 1 ? song.Number - 1 : -1;
             return PartialView(song);
+        }
+
+        
+
+        public ActionResult ChangeSong(Song song)
+        {
+            SiteContext siteDataBase = new SiteContext();
+            Song songToEdit = siteDataBase.Songs.FirstOrDefault(x => x.Id == song.Id);
+            songToEdit.Text = song.Text;
+            siteDataBase.SaveChanges();
+            return RedirectToAction("Song", new { performerId = songToEdit.PerformerId, songNumber = songToEdit.Number });
         }
 
         public ActionResult ChangedSongInfo(int performerId, int songNumber)

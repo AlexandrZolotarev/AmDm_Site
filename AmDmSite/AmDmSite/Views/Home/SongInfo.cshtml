@@ -11,7 +11,7 @@
 <div class="col-md-4 redactButton">
     @if (ViewBag.NextSong != -1)
     {
-        @(Ajax.ActionLink("Редактировать", "ChangedSongInfo", "Home", new { performerId = Model.PerformerId, songNumber = ViewBag.PreviousSong }, new AjaxOptions { UpdateTargetId = "change" }))
+        @(Ajax.ActionLink("Редактировать", "ChangedSongInfo", "Home", new { performerId = Model.PerformerId, songNumber = Model.Number }, new AjaxOptions { UpdateTargetId = "change" }))
     }
 </div>
 <div class="col-md-4 priviousButton">

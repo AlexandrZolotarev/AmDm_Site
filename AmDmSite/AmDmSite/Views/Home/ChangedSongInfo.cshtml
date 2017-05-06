@@ -3,10 +3,21 @@
 
 <div class="col-md-8">
     <div class="h2__info">Текст:</div>
+    @using (Html.BeginForm("ChangeSong", "Home", FormMethod.Post))
+    {
+        @Html.ValidationSummary(true);
+        @Html.HiddenFor(m => m.Id)
     <div class="text">
-    @Html.TextAreaFor(m => m.Text,40,30, new { style = "width: 100%; max-width: 100%;" } )
+    @Html.TextAreaFor(m => m.Text, 40, 30, new { style = "width: 100%; max-width: 100%;" })
     </div>
+    <button type="submit" class="btn btn-default btn-mine">
+        <span class="fi-save">Сохранить</span>
+    </button>
+    }
 </div>
+
+    
+
 <div class="col-md-4">
     <h2>Аппликатуры аккордов</h2>
     <ul class="Accords">
