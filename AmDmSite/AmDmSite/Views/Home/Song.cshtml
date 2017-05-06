@@ -20,42 +20,44 @@
 </style>
 <div id="songInfo">
     <h1>@Model.Performer.Name - @Model.Name</h1>
-    <div class="col-md-6 priviousButton">
+    <div class="col-md-4 priviousButton">
         @if (ViewBag.PreviousSong != -1)
         {
             @(Ajax.ActionLink("Назад", "SongInfo", "Home", new { performerId = Model.PerformerId, songNumber = ViewBag.PreviousSong }, new AjaxOptions { UpdateTargetId = "songInfo" }, new { onclick = "link()" }))
         }
     </div>
-
-    <div class="col-md-6 priviousButton">
+    <div class="col-md-4 redactButton">
+        @if (ViewBag.NextSong != -1)
+        {
+            @(Ajax.ActionLink("Редактировать", "ChangedSongInfo", "Home", new { performerId = Model.PerformerId, songNumber = ViewBag.PreviousSong }, new AjaxOptions { UpdateTargetId = "change" }))
+        }
+    </div>
+    <div class="col-md-4 priviousButton">
         @if (ViewBag.NextSong != -1)
         {
             @(Ajax.ActionLink("Вперед", "SongInfo", "Home", new { performerId = Model.PerformerId, songNumber = ViewBag.NextSong }, new AjaxOptions { UpdateTargetId = "songInfo" }, new { onclick = "link()" }))
         }
     </div>
-
-    <div class="col-md-8">
-        <div class="h2__info">Текст:</div>
-        <div class="text">
-            <pre>
+    <div id="change">
+        <div class="col-md-8">
+            <div class="h2__info">Текст:</div>
+            <div class="text">
+                <pre>
     @Model.Text
 </pre>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <h2>Аппликатуры аккордов</h2>
+            <ul class="Accords">
+                @foreach (var accord in Model.Accords)
+            {
+                    <li>
+                        <a class="photo" id="photo"><img src=@accord.PathToPicture title=@accord.Name width="80"> </a>
+                    </li>
+                }
+
+            </ul>
         </div>
     </div>
-    <div class="col-md-4">
-        <h2>Аппликатуры аккордов</h2>
-        <ul class="Accords">
-            @foreach (var accord in Model.Accords)
-            {
-                <li>
-                    <a class="photo" id="photo"><img src=@accord.PathToPicture title=@accord.Name width="80"> </a>
-                </li>
-            }
-
-        </ul>
-    </div>
 </div>
-
-@section scripts{
-
-    }

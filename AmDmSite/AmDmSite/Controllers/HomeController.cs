@@ -124,5 +124,14 @@ namespace AmDmSite.Controllers
             ViewBag.PreviousSong = song.Number > 1 ? song.Number - 1 : -1;
             return PartialView(song);
         }
+
+        public ActionResult ChangedSongInfo(int performerId, int songNumber)
+        {
+            SiteContext siteDataBase = new SiteContext();
+            Performer performer = siteDataBase.Performers.FirstOrDefault(x => x.Id == performerId);
+            Song song = performer.Songs.FirstOrDefault(x => x.Number == songNumber);
+            return View(song);
+        }
+
     }
 }
