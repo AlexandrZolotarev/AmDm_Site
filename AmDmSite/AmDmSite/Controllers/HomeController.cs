@@ -6,17 +6,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.UI;
 
 namespace AmDmSite.Controllers
 {
     public class HomeController : Controller
     {
-
+        [OutputCache(Duration = 30, Location = OutputCacheLocation.Downstream)]
         public ActionResult Index(int? page, int? column, int? typeAscending)
 
         {
-            //Comment strings must save, while update function did't create
-
             //HtmlAmDmParser.GetPerformersInfo();
             SiteContext s = new SiteContext();
             List<Performer> performers = new List<Performer>(s.Performers);
@@ -72,16 +71,19 @@ namespace AmDmSite.Controllers
             }
         }
 
+        [OutputCache(Duration = 30, Location = OutputCacheLocation.Downstream)]
         public ActionResult About()
         {
             return View();
         }
 
+        [OutputCache(Duration = 30, Location = OutputCacheLocation.Downstream)]
         public ActionResult Contact()
         {
             return View();
         }
 
+        [OutputCache(Duration = 30, Location = OutputCacheLocation.Downstream)]
         public ActionResult Performer(int performerId, int? page)
         {
             using (SiteContext siteDataBase = new SiteContext())
@@ -90,15 +92,14 @@ namespace AmDmSite.Controllers
                 ViewBag.PerformerName = performer.Name;
                 ViewBag.PerformerBiography = performer.Biography;
                 ViewBag.PerformerId = performerId;
-                performer.ViewsCount++;
-                siteDataBase.SaveChanges();
-
                 int pageSize = 10;
                 int pageNumber = (page ?? 1);
+                if (pageNumber == 1) performer.ViewsCount++;
+                siteDataBase.SaveChanges();
                 return View(performer.Songs.ToPagedList(pageNumber, pageSize));
             }
         }
-
+        [OutputCache(Duration = 30, Location = OutputCacheLocation.Downstream)]
         public ActionResult Song(int performerId, int songNumber)
         {
             SiteContext siteDataBase = new SiteContext();
@@ -110,7 +111,7 @@ namespace AmDmSite.Controllers
             ViewBag.PreviousSong = song.Number > 1 ? song.Number - 1 : -1;
             return View(song);
         }
-
+        [OutputCache(Duration = 30, Location = OutputCacheLocation.Downstream)]
         public ActionResult SongInfo(int performerId, int songNumber)
         {
             bool check = Request.IsAjaxRequest();

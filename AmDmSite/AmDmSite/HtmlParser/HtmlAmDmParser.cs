@@ -24,8 +24,8 @@ namespace AmDmSite.HtmlParser
                 accords = new List<Accord>(s.Accords);
             System.Net.WebClient web = new System.Net.WebClient();
             web.Encoding = UTF8Encoding.UTF8;
-                // for (int page = 1; page <= 10; page++)
-                for (int page = 1; page <= 1; page++)
+               for (int page = 1; page <= 10; page++)
+                //for (int page = 1; page <= 1; page++)
                 {
                     string str = web.DownloadString($"https://amdm.ru/chords/page" + page + "/");
                     str = HttpUtility.HtmlDecode(str);
@@ -34,8 +34,8 @@ namespace AmDmSite.HtmlParser
                     siteHtml.LoadHtml(str);
                     var rows = siteHtml.DocumentNode.SelectNodes(".//tr");
 
-                   // for (int i = 1; i <= 30; i++)
-                        for (int i = 1; i <= 20; i++)
+                   for (int i = 1; i <= 30; i++)
+                        //for (int i = 1; i <= 20; i++)
                         {
                         Performer performer = new Performer();
                         var image = rows[i].SelectNodes(".//img");
@@ -72,12 +72,8 @@ namespace AmDmSite.HtmlParser
 
             if (rows != null)
             {
-                //for (int i = 1; i < rows.Count - 5; i++)
-                int breaker = 15;
-                if (rows.Count <= 15)
-                    breaker = rows.Count;
-
-                for (int i = 1; i < breaker; i++)
+                for (int i = 1; i < rows.Count; i++)
+                //for (int i = 1; i < breaker; i++)
                 {
                     Thread.Sleep(800);
                     if (rows[i].SelectNodes(".//a") != null)
