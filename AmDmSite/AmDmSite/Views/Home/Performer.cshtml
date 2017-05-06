@@ -23,7 +23,18 @@
 <br />
 <div class="h1__info">Список композиций</div>
 <table class="items">
-    <thead><tr class="top_label"><th colspan="2">Композиция</th><th class="number">Просмотров</th></tr></thead>
+    <thead><tr class="top_label">
+        <th colspan="2">
+        Композиция
+        @(Html.ActionLink("A-z", "Index", "Home", new { ViewBag.Page, column = 1, typeAscending = ViewBag.NameType }, null))
+        </th>
+        <th class="number">
+        Просмотров
+            @(Html.ActionLink("⇅", "Index", "Home", new { ViewBag.Page, column = 2, typeAscending = ViewBag.SongsType }, null))
+        </th>
+        </tr>
+    </thead>
+
     <tbody>
         @foreach (var song in Model)
         {

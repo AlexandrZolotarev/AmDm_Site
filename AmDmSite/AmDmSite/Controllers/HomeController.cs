@@ -71,6 +71,63 @@ namespace AmDmSite.Controllers
             }
         }
 
+
+
+        public ActionResult PerformerB(int performerId, int? page, int? column, int? typeAscending) // must finish the sorting of the songs
+        {
+            using (SiteContext siteDataBase = new SiteContext())
+            {
+                Performer performer = siteDataBase.Performers.FirstOrDefault(x => x.Id == performerId);
+                ViewBag.PerformerName = performer.Name;
+                ViewBag.PerformerBiography = performer.Biography;
+                ViewBag.PerformerId = performerId;
+                int pageSize = 20;
+                int pageNumber = (page ?? 1);
+                int colNumber = (column ?? 0);
+                int ascendType = (typeAscending ?? -1);
+                if (pageNumber == 1) performer.ViewsCount++;
+                siteDataBase.SaveChanges();
+               
+                ViewBag.Page = pageNumber;
+                ViewBag.NameType = 0;
+                ViewBag.SongsType = 0;
+                ViewBag.ViewsCountType = 0;
+
+                if (ascendType == -1)
+                    return View(performer.Songs.ToPagedList(pageNumber, pageSize));
+
+                switch (column)
+                {
+                    case 1:
+                        if (ascendType == 0)
+                        {
+                            ViewBag.NameType = 1;
+                            return View(performer.Songs.OrderBy(x => x.Name).ToPagedList(pageNumber, pageSize));
+                        }
+                        else
+                        {
+                            ViewBag.NameType = 0;
+                            return View(performer.Songs.OrderByDescending(x => x.Name).ToPagedList(pageNumber, pageSize));
+                        }
+                    case 2:
+                        if (ascendType == 0)
+                        {
+                            ViewBag.SongsType = 1;
+                            return View(performer.Songs.OrderBy(x => x.ViewsCount).ToPagedList(pageNumber, pageSize));
+                        }
+                        else
+                        {
+                            ViewBag.SongsType = 0;
+                            return View(performer.Songs.OrderByDescending(x => x.ViewsCount).ToPagedList(pageNumber, pageSize));
+                        }
+                    default: return View(performer.Songs.ToPagedList(pageNumber, pageSize));
+                }
+            }
+        }
+
+
+
+
         [OutputCache(Duration = 30, Location = OutputCacheLocation.Downstream)]
         public ActionResult About()
         {
