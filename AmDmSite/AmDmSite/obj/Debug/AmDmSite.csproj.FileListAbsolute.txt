@@ -186,3 +186,5 @@ D:\AmDm_Site\AmDmSite\AmDmSite\bin\MvcSiteMapProvider.WebActivator.dll
 D:\AmDm_Site\AmDmSite\AmDmSite\bin\WebActivatorEx.dll
 D:\AmDm_Site\AmDmSite\AmDmSite\bin\MvcSiteMapProvider.xml
 D:\AmDm_Site\AmDmSite\AmDmSite\bin\MvcSiteMapProvider.WebActivator.xml
+D:\AmDm_Site\AmDmSite\AmDmSite\obj\Debug\AmDmSite.Migrations.ConsoleProjectMigration.resources
+D:\AmDm_Site\AmDmSite\AmDmSite\obj\Debug\AmDmSite.csproj.GenerateResource.Cache

@@ -10,14 +10,22 @@ using System.Web;
 
 namespace PerformersUpdater
 {
-    class Program
+    public class PerformersHtmlUpdater
     {
         static string biography;
         public static List<Accord> accords = new List<Accord>();
 
+        public static void Main()
+        {
+            GetPerformersInfo();
+            Console.ReadLine();
+        }
+
         public static void GetPerformersInfo()
         {
             using (SiteContext s = new SiteContext()) {
+                s.Performers.Add(new Performer { Name = "test", Biography = "test", ViewsCount = 1 });
+                s.SaveChanges();
                 Console.WriteLine(s.Performers.Count());
                 //s.Songs.RemoveRange(s.Songs);
                 //s.Performers.RemoveRange(s.Performers);
@@ -63,12 +71,12 @@ namespace PerformersUpdater
             HtmlDocument siteHtml = new HtmlDocument();
             siteHtml.LoadHtml(str);
             var biographyQuery = siteHtml.DocumentNode
-    .Descendants("div")
-    .Where(d =>
-       d.Attributes.Contains("class")
-       &&
-       d.Attributes["class"].Value.Contains("artist-profile__bio")
-    );
+                                         .Descendants("div")
+                                         .Where(d =>
+                                         d.Attributes.Contains("class")
+                                         &&
+                                         d.Attributes["class"].Value.Contains("artist-profile__bio")
+                                        );
             biography = biographyQuery.ToList()[0].InnerText;
             var rows = siteHtml.DocumentNode.SelectNodes(".//tr");
 

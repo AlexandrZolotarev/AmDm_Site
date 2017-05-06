@@ -16,7 +16,7 @@ namespace AmDmSite.Controllers
         public ActionResult Index(int? page, int? column, int? typeAscending)
 
         {
-            //HtmlAmDmParser.GetPerformersInfo();
+          //  HtmlAmDmParser.GetPerformersInfo();
             SiteContext s = new SiteContext();
             List<Performer> performers = new List<Performer>(s.Performers);
             int pageSize = 10;

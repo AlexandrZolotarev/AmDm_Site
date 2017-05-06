@@ -18,9 +18,9 @@ namespace AmDmSite.HtmlParser
         public static void GetPerformersInfo()
         {
             using (SiteContext s = new SiteContext()) {
-                s.Songs.RemoveRange(s.Songs);
-                s.Performers.RemoveRange(s.Performers);
-                s.SaveChanges();
+               // s.Songs.RemoveRange(s.Songs);
+               // s.Performers.RemoveRange(s.Performers);
+               // s.SaveChanges();
                 accords = new List<Accord>(s.Accords);
             System.Net.WebClient web = new System.Net.WebClient();
             web.Encoding = UTF8Encoding.UTF8;
@@ -34,17 +34,24 @@ namespace AmDmSite.HtmlParser
                     siteHtml.LoadHtml(str);
                     var rows = siteHtml.DocumentNode.SelectNodes(".//tr");
 
-                   for (int i = 1; i <= 30; i++)
+                    for (int i = 1; i <= 30; i++)
+                    {
                         //for (int i = 1; i <= 20; i++)
+                        try
                         {
-                        Performer performer = new Performer();
-                        var image = rows[i].SelectNodes(".//img");
-                        performer.PathToPhoto = image[0].Attributes[0].Value;
-                        performer.Name = rows[i].SelectNodes(".//a")[1].InnerText.Trim();
-                        performer.Songs = GetPerformerSongsInfo("https:" + rows[i].SelectNodes(".//a")[1].Attributes[0].Value);
-                        performer.Biography = biography;
-                        s.Performers.Add(performer);
-                        s.SaveChanges();
+                            Performer performer = new Performer();
+                            var image = rows[i].SelectNodes(".//img");
+                            performer.PathToPhoto = image[0].Attributes[0].Value;
+                            performer.Name = rows[i].SelectNodes(".//a")[1].InnerText.Trim();
+                            if (s.Performers.FirstOrDefault(x => x.Name.Equals(performer.Name)) == null)
+                            {
+                                performer.Songs = GetPerformerSongsInfo("https:" + rows[i].SelectNodes(".//a")[1].Attributes[0].Value);
+                                performer.Biography = biography;
+                                s.Performers.Add(performer);
+                                s.SaveChanges();
+                            }
+                        }
+                        finally { }
                     }
                 }
             }
@@ -76,18 +83,22 @@ namespace AmDmSite.HtmlParser
                 //for (int i = 1; i < breaker; i++)
                 {
                     Thread.Sleep(800);
-                    if (rows[i].SelectNodes(".//a") != null)
+                    try
                     {
-                        if (rows[i].SelectNodes(".//a")[0].Attributes[1].Value.Equals("g-link"))
+                        if (rows[i].SelectNodes(".//a") != null)
                         {
-                            Song song = new Song();
-                            song.Name = rows[i].SelectNodes(".//a")[0].InnerText.Trim();
-                            song = GetSongInfo("https:" + rows[i].SelectNodes(".//a")[0].Attributes[0].Value, song);
-                            Console.WriteLine("_________________________________________");
-                            song.Number = i;
-                            songs.Add(song);
+                            if (rows[i].SelectNodes(".//a")[0].Attributes[1].Value.Equals("g-link"))
+                            {
+                                Song song = new Song();
+                                song.Name = rows[i].SelectNodes(".//a")[0].InnerText.Trim();
+                                song = GetSongInfo("https:" + rows[i].SelectNodes(".//a")[0].Attributes[0].Value, song);
+                                Console.WriteLine("_________________________________________");
+                                song.Number = i;
+                                songs.Add(song);
+                            }
                         }
                     }
+                    finally { }
                 }
             }
             return songs;
