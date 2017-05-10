@@ -186,5 +186,230 @@ D:\AmDm_Site\AmDmSite\AmDmSite\bin\MvcSiteMapProvider.WebActivator.dll
 D:\AmDm_Site\AmDmSite\AmDmSite\bin\WebActivatorEx.dll
 D:\AmDm_Site\AmDmSite\AmDmSite\bin\MvcSiteMapProvider.xml
 D:\AmDm_Site\AmDmSite\AmDmSite\bin\MvcSiteMapProvider.WebActivator.xml
-D:\AmDm_Site\AmDmSite\AmDmSite\obj\Debug\AmDmSite.Migrations.ConsoleProjectMigration.resources
 D:\AmDm_Site\AmDmSite\AmDmSite\obj\Debug\AmDmSite.csproj.GenerateResource.Cache
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\AmDmSite\bin\roslyn\csc.exe
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\AmDmSite\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\AmDmSite\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\AmDmSite\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\AmDmSite\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\AmDmSite\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\AmDmSite\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\AmDmSite\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\AmDmSite\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\AmDmSite\bin\roslyn\vbc.exe
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\AmDmSite\bin\roslyn\VBCSCompiler.exe
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\AmDmSite\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\AmDmSite\bin\AmDmSite.dll.config
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\AmDmSite\bin\AmDmSite.dll
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\AmDmSite\bin\AmDmSite.pdb
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\AmDmSite\bin\Antlr3.Runtime.dll
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\AmDmSite\bin\EntityFramework.dll
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\AmDmSite\bin\EntityFramework.SqlServer.dll
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\AmDmSite\bin\HtmlAgilityPack.dll
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\AmDmSite\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\AmDmSite\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\AmDmSite\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\AmDmSite\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\AmDmSite\bin\Microsoft.Owin.dll
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\AmDmSite\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\AmDmSite\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\AmDmSite\bin\Microsoft.Owin.Security.dll
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\AmDmSite\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\AmDmSite\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\AmDmSite\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\AmDmSite\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\AmDmSite\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\AmDmSite\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\AmDmSite\bin\MvcSiteMapProvider.dll
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\AmDmSite\bin\MvcSiteMapProvider.WebActivator.dll
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\AmDmSite\bin\Newtonsoft.Json.dll
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\AmDmSite\bin\Owin.dll
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\AmDmSite\bin\PagedList.dll
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\AmDmSite\bin\PagedList.Mvc.dll
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\AmDmSite\bin\System.Web.Helpers.dll
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\AmDmSite\bin\System.Web.Mvc.dll
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\AmDmSite\bin\System.Web.Optimization.dll
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\AmDmSite\bin\System.Web.Razor.dll
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\AmDmSite\bin\System.Web.WebPages.Deployment.dll
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\AmDmSite\bin\System.Web.WebPages.dll
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\AmDmSite\bin\System.Web.WebPages.Razor.dll
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\AmDmSite\bin\WebActivatorEx.dll
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\AmDmSite\bin\WebGrease.dll
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\AmDmSite\bin\HtmlAgilityPack.pdb
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\AmDmSite\bin\HtmlAgilityPack.xml
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\AmDmSite\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\AmDmSite\bin\MvcSiteMapProvider.xml
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\AmDmSite\bin\MvcSiteMapProvider.WebActivator.xml
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\AmDmSite\bin\PagedList.xml
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\AmDmSite\bin\PagedList.Mvc.xml
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\AmDmSite\bin\System.Web.Helpers.xml
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\AmDmSite\bin\System.Web.Mvc.xml
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\AmDmSite\bin\System.Web.Optimization.xml
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\AmDmSite\bin\System.Web.Razor.xml
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\AmDmSite\bin\System.Web.WebPages.xml
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\AmDmSite\bin\System.Web.WebPages.Deployment.xml
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\AmDmSite\bin\System.Web.WebPages.Razor.xml
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\AmDmSite\bin\Antlr3.Runtime.pdb
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\AmDmSite\bin\Newtonsoft.Json.xml
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\AmDmSite\bin\EntityFramework.xml
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\AmDmSite\bin\EntityFramework.SqlServer.xml
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\AmDmSite\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\AmDmSite\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\AmDmSite\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\AmDmSite\bin\Microsoft.Owin.xml
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\AmDmSite\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\AmDmSite\bin\Microsoft.Owin.Security.xml
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\AmDmSite\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\AmDmSite\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\AmDmSite\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\AmDmSite\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\AmDmSite\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\AmDmSite\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\AmDmSite\bin\ru\System.Web.Helpers.resources.dll
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\AmDmSite\bin\ru\System.Web.Mvc.resources.dll
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\AmDmSite\bin\ru\System.Web.Optimization.resources.dll
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\AmDmSite\bin\ru\System.Web.Razor.resources.dll
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\AmDmSite\bin\ru\System.Web.WebPages.resources.dll
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\AmDmSite\bin\ru\System.Web.WebPages.Deployment.resources.dll
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\AmDmSite\bin\ru\System.Web.WebPages.Razor.resources.dll
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\AmDmSite\bin\ru\EntityFramework.resources.dll
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\AmDmSite\bin\ru\EntityFramework.SqlServer.resources.dll
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\AmDmSite\bin\ru\Microsoft.AspNet.Identity.Core.resources.dll
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\AmDmSite\bin\ru\Microsoft.AspNet.Identity.Owin.resources.dll
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\AmDmSite\bin\ru\Microsoft.AspNet.Identity.EntityFramework.resources.dll
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\AmDmSite\bin\ru\Microsoft.Owin.resources.dll
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\AmDmSite\bin\ru\Microsoft.Owin.Host.SystemWeb.resources.dll
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\AmDmSite\bin\ru\Microsoft.Owin.Security.resources.dll
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\AmDmSite\bin\ru\Microsoft.Owin.Security.Facebook.resources.dll
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\AmDmSite\bin\ru\Microsoft.Owin.Security.Google.resources.dll
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\AmDmSite\bin\ru\Microsoft.Owin.Security.Twitter.resources.dll
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\AmDmSite\bin\ru\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\AmDmSite\obj\Debug\AmDmSite.csprojResolveAssemblyReference.cache
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\AmDmSite\obj\Debug\AmDmSite.dll
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\AmDmSite\obj\Debug\AmDmSite.pdb
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\AmDmSite\obj\Debug\AmDmSite.Migrations.ssss.resources
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\AmDmSite\obj\Debug\AmDmSite.csproj.GenerateResource.Cache
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\AmDmSite\bin\NLog.config
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\AmDmSite\bin\NLog.dll
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\AmDmSite\bin\NLog.xml
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\AmDmSite\bin\Microsoft.AspNet.SignalR.Core.dll
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\AmDmSite\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\AmDmSite\bin\Microsoft.AspNet.SignalR.Core.xml
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\AmDmSite\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+D:\Установщики\AmDmSite\AmDmSite\bin\roslyn\csc.exe
+D:\Установщики\AmDmSite\AmDmSite\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Установщики\AmDmSite\AmDmSite\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Установщики\AmDmSite\AmDmSite\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Установщики\AmDmSite\AmDmSite\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Установщики\AmDmSite\AmDmSite\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Установщики\AmDmSite\AmDmSite\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Установщики\AmDmSite\AmDmSite\bin\roslyn\System.Collections.Immutable.dll
+D:\Установщики\AmDmSite\AmDmSite\bin\roslyn\System.Reflection.Metadata.dll
+D:\Установщики\AmDmSite\AmDmSite\bin\roslyn\vbc.exe
+D:\Установщики\AmDmSite\AmDmSite\bin\roslyn\VBCSCompiler.exe
+D:\Установщики\AmDmSite\AmDmSite\bin\roslyn\VBCSCompiler.exe.config
+D:\Установщики\AmDmSite\AmDmSite\bin\NLog.config
+D:\Установщики\AmDmSite\AmDmSite\bin\AmDmSite.dll.config
+D:\Установщики\AmDmSite\AmDmSite\bin\AmDmSite.dll
+D:\Установщики\AmDmSite\AmDmSite\bin\AmDmSite.pdb
+D:\Установщики\AmDmSite\AmDmSite\bin\Antlr3.Runtime.dll
+D:\Установщики\AmDmSite\AmDmSite\bin\EntityFramework.dll
+D:\Установщики\AmDmSite\AmDmSite\bin\EntityFramework.SqlServer.dll
+D:\Установщики\AmDmSite\AmDmSite\bin\HtmlAgilityPack.dll
+D:\Установщики\AmDmSite\AmDmSite\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Установщики\AmDmSite\AmDmSite\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Установщики\AmDmSite\AmDmSite\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Установщики\AmDmSite\AmDmSite\bin\Microsoft.AspNet.SignalR.Core.dll
+D:\Установщики\AmDmSite\AmDmSite\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+D:\Установщики\AmDmSite\AmDmSite\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Установщики\AmDmSite\AmDmSite\bin\Microsoft.Owin.dll
+D:\Установщики\AmDmSite\AmDmSite\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Установщики\AmDmSite\AmDmSite\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Установщики\AmDmSite\AmDmSite\bin\Microsoft.Owin.Security.dll
+D:\Установщики\AmDmSite\AmDmSite\bin\Microsoft.Owin.Security.Facebook.dll
+D:\Установщики\AmDmSite\AmDmSite\bin\Microsoft.Owin.Security.Google.dll
+D:\Установщики\AmDmSite\AmDmSite\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\Установщики\AmDmSite\AmDmSite\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Установщики\AmDmSite\AmDmSite\bin\Microsoft.Owin.Security.Twitter.dll
+D:\Установщики\AmDmSite\AmDmSite\bin\Microsoft.Web.Infrastructure.dll
+D:\Установщики\AmDmSite\AmDmSite\bin\MvcSiteMapProvider.dll
+D:\Установщики\AmDmSite\AmDmSite\bin\MvcSiteMapProvider.WebActivator.dll
+D:\Установщики\AmDmSite\AmDmSite\bin\Newtonsoft.Json.dll
+D:\Установщики\AmDmSite\AmDmSite\bin\NLog.dll
+D:\Установщики\AmDmSite\AmDmSite\bin\Owin.dll
+D:\Установщики\AmDmSite\AmDmSite\bin\PagedList.dll
+D:\Установщики\AmDmSite\AmDmSite\bin\PagedList.Mvc.dll
+D:\Установщики\AmDmSite\AmDmSite\bin\System.Web.Helpers.dll
+D:\Установщики\AmDmSite\AmDmSite\bin\System.Web.Mvc.dll
+D:\Установщики\AmDmSite\AmDmSite\bin\System.Web.Optimization.dll
+D:\Установщики\AmDmSite\AmDmSite\bin\System.Web.Razor.dll
+D:\Установщики\AmDmSite\AmDmSite\bin\System.Web.WebPages.Deployment.dll
+D:\Установщики\AmDmSite\AmDmSite\bin\System.Web.WebPages.dll
+D:\Установщики\AmDmSite\AmDmSite\bin\System.Web.WebPages.Razor.dll
+D:\Установщики\AmDmSite\AmDmSite\bin\WebActivatorEx.dll
+D:\Установщики\AmDmSite\AmDmSite\bin\WebGrease.dll
+D:\Установщики\AmDmSite\AmDmSite\bin\HtmlAgilityPack.pdb
+D:\Установщики\AmDmSite\AmDmSite\bin\HtmlAgilityPack.xml
+D:\Установщики\AmDmSite\AmDmSite\bin\Microsoft.AspNet.SignalR.Core.xml
+D:\Установщики\AmDmSite\AmDmSite\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+D:\Установщики\AmDmSite\AmDmSite\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Установщики\AmDmSite\AmDmSite\bin\MvcSiteMapProvider.xml
+D:\Установщики\AmDmSite\AmDmSite\bin\MvcSiteMapProvider.WebActivator.xml
+D:\Установщики\AmDmSite\AmDmSite\bin\NLog.xml
+D:\Установщики\AmDmSite\AmDmSite\bin\PagedList.xml
+D:\Установщики\AmDmSite\AmDmSite\bin\PagedList.Mvc.xml
+D:\Установщики\AmDmSite\AmDmSite\bin\System.Web.Helpers.xml
+D:\Установщики\AmDmSite\AmDmSite\bin\System.Web.Mvc.xml
+D:\Установщики\AmDmSite\AmDmSite\bin\System.Web.Optimization.xml
+D:\Установщики\AmDmSite\AmDmSite\bin\System.Web.Razor.xml
+D:\Установщики\AmDmSite\AmDmSite\bin\System.Web.WebPages.xml
+D:\Установщики\AmDmSite\AmDmSite\bin\System.Web.WebPages.Deployment.xml
+D:\Установщики\AmDmSite\AmDmSite\bin\System.Web.WebPages.Razor.xml
+D:\Установщики\AmDmSite\AmDmSite\bin\Antlr3.Runtime.pdb
+D:\Установщики\AmDmSite\AmDmSite\bin\Newtonsoft.Json.xml
+D:\Установщики\AmDmSite\AmDmSite\bin\EntityFramework.xml
+D:\Установщики\AmDmSite\AmDmSite\bin\EntityFramework.SqlServer.xml
+D:\Установщики\AmDmSite\AmDmSite\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Установщики\AmDmSite\AmDmSite\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\Установщики\AmDmSite\AmDmSite\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Установщики\AmDmSite\AmDmSite\bin\Microsoft.Owin.xml
+D:\Установщики\AmDmSite\AmDmSite\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Установщики\AmDmSite\AmDmSite\bin\Microsoft.Owin.Security.xml
+D:\Установщики\AmDmSite\AmDmSite\bin\Microsoft.Owin.Security.Facebook.xml
+D:\Установщики\AmDmSite\AmDmSite\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Установщики\AmDmSite\AmDmSite\bin\Microsoft.Owin.Security.OAuth.xml
+D:\Установщики\AmDmSite\AmDmSite\bin\Microsoft.Owin.Security.Google.xml
+D:\Установщики\AmDmSite\AmDmSite\bin\Microsoft.Owin.Security.Twitter.xml
+D:\Установщики\AmDmSite\AmDmSite\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\Установщики\AmDmSite\AmDmSite\bin\ru\System.Web.Helpers.resources.dll
+D:\Установщики\AmDmSite\AmDmSite\bin\ru\System.Web.Mvc.resources.dll
+D:\Установщики\AmDmSite\AmDmSite\bin\ru\System.Web.Optimization.resources.dll
+D:\Установщики\AmDmSite\AmDmSite\bin\ru\System.Web.Razor.resources.dll
+D:\Установщики\AmDmSite\AmDmSite\bin\ru\System.Web.WebPages.resources.dll
+D:\Установщики\AmDmSite\AmDmSite\bin\ru\System.Web.WebPages.Deployment.resources.dll
+D:\Установщики\AmDmSite\AmDmSite\bin\ru\System.Web.WebPages.Razor.resources.dll
+D:\Установщики\AmDmSite\AmDmSite\bin\ru\EntityFramework.resources.dll
+D:\Установщики\AmDmSite\AmDmSite\bin\ru\EntityFramework.SqlServer.resources.dll
+D:\Установщики\AmDmSite\AmDmSite\bin\ru\Microsoft.AspNet.Identity.Core.resources.dll
+D:\Установщики\AmDmSite\AmDmSite\bin\ru\Microsoft.AspNet.Identity.Owin.resources.dll
+D:\Установщики\AmDmSite\AmDmSite\bin\ru\Microsoft.AspNet.Identity.EntityFramework.resources.dll
+D:\Установщики\AmDmSite\AmDmSite\bin\ru\Microsoft.Owin.resources.dll
+D:\Установщики\AmDmSite\AmDmSite\bin\ru\Microsoft.Owin.Host.SystemWeb.resources.dll
+D:\Установщики\AmDmSite\AmDmSite\bin\ru\Microsoft.Owin.Security.resources.dll
+D:\Установщики\AmDmSite\AmDmSite\bin\ru\Microsoft.Owin.Security.Facebook.resources.dll
+D:\Установщики\AmDmSite\AmDmSite\bin\ru\Microsoft.Owin.Security.Google.resources.dll
+D:\Установщики\AmDmSite\AmDmSite\bin\ru\Microsoft.Owin.Security.Twitter.resources.dll
+D:\Установщики\AmDmSite\AmDmSite\bin\ru\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
+D:\Установщики\AmDmSite\AmDmSite\obj\Debug\AmDmSite.csprojResolveAssemblyReference.cache
+D:\Установщики\AmDmSite\AmDmSite\obj\Debug\AmDmSite.Migrations.ssss.resources
+D:\Установщики\AmDmSite\AmDmSite\obj\Debug\AmDmSite.csproj.GenerateResource.Cache
+D:\Установщики\AmDmSite\AmDmSite\obj\Debug\AmDmSite.dll
+D:\Установщики\AmDmSite\AmDmSite\obj\Debug\AmDmSite.pdb
+D:\AmDm_Site\AmDmSite\AmDmSite\bin\NLog.config
+D:\AmDm_Site\AmDmSite\AmDmSite\bin\Microsoft.AspNet.SignalR.Core.dll
+D:\AmDm_Site\AmDmSite\AmDmSite\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+D:\AmDm_Site\AmDmSite\AmDmSite\bin\NLog.dll
+D:\AmDm_Site\AmDmSite\AmDmSite\bin\Microsoft.AspNet.SignalR.Core.xml
+D:\AmDm_Site\AmDmSite\AmDmSite\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+D:\AmDm_Site\AmDmSite\AmDmSite\bin\NLog.xml
+D:\AmDm_Site\AmDmSite\AmDmSite\obj\Debug\AmDmSite.Migrations.ssss.resources

@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading;
 using System.Web;
 
@@ -47,8 +48,9 @@ namespace AmDmSite.HtmlParser
                             {
                                 performer.Songs = GetPerformerSongsInfo("https:" + rows[i].SelectNodes(".//a")[1].Attributes[0].Value);
                                 performer.Biography = biography;
-                                s.Performers.Add(performer);
+                                s.Performers.Add(performer);                             
                                 s.SaveChanges();
+                                Console.WriteLine("Added performer " + performer.Name);
                             }
                         }
                         catch { }
@@ -79,8 +81,8 @@ namespace AmDmSite.HtmlParser
 
             if (rows != null)
             {
-                for (int i = 1; i < rows.Count; i++)
-                //for (int i = 1; i < breaker; i++)
+                //for (int i = 1; i < rows.Count; i++)
+                for (int i = 1; i < 3; i++)
                 {
                     Thread.Sleep(800);
                     try
@@ -95,6 +97,7 @@ namespace AmDmSite.HtmlParser
                                 Console.WriteLine("_________________________________________");
                                 song.Number = i;
                                 songs.Add(song);
+                                Console.WriteLine("Added song " + song.Name);
                             }
                         }
                     }
@@ -123,7 +126,10 @@ namespace AmDmSite.HtmlParser
                     if (!accords.Exists(x => x.PathToPicture.Equals(accordImage.Attributes[0].Value)))
                     {
                         Accord accord = new Accord() { PathToPicture = accordImage.Attributes[0].Value };
+                        Regex rgx = new Regex(@"([^/]+)(?=_[^_]*$)");
+                        accord.Name = rgx.Matches(accord.PathToPicture)[0].ToString();
                         accords.Add(accord);
+                       
                         song.Accords.Add(accord);
                     }
                     else

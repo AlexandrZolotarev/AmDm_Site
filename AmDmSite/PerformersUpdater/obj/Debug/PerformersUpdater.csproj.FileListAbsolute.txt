@@ -76,3 +76,165 @@ D:\AmDm_Site\AmDmSite\PerformersUpdater\bin\Debug\ru\System.Web.WebPages.Deploym
 D:\AmDm_Site\AmDmSite\PerformersUpdater\obj\Debug\PerformersUpdater.csprojResolveAssemblyReference.cache
 D:\AmDm_Site\AmDmSite\PerformersUpdater\obj\Debug\PerformersUpdater.exe
 D:\AmDm_Site\AmDmSite\PerformersUpdater\obj\Debug\PerformersUpdater.pdb
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\PerformersUpdater\bin\Debug\roslyn\csc.exe
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\PerformersUpdater\bin\Debug\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\PerformersUpdater\bin\Debug\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\PerformersUpdater\bin\Debug\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\PerformersUpdater\bin\Debug\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\PerformersUpdater\bin\Debug\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\PerformersUpdater\bin\Debug\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\PerformersUpdater\bin\Debug\roslyn\System.Collections.Immutable.dll
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\PerformersUpdater\bin\Debug\roslyn\System.Reflection.Metadata.dll
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\PerformersUpdater\bin\Debug\roslyn\vbc.exe
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\PerformersUpdater\bin\Debug\roslyn\VBCSCompiler.exe
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\PerformersUpdater\bin\Debug\roslyn\VBCSCompiler.exe.config
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\PerformersUpdater\bin\Debug\PerformersUpdater.exe.config
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\PerformersUpdater\bin\Debug\PerformersUpdater.exe
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\PerformersUpdater\bin\Debug\PerformersUpdater.pdb
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\PerformersUpdater\bin\Debug\AmDmSite.dll
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\PerformersUpdater\bin\Debug\EntityFramework.dll
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\PerformersUpdater\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\PerformersUpdater\bin\Debug\HtmlAgilityPack.dll
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\PerformersUpdater\bin\Debug\Microsoft.Owin.dll
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\PerformersUpdater\bin\Debug\System.Web.Optimization.dll
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\PerformersUpdater\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\PerformersUpdater\bin\Debug\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\PerformersUpdater\bin\Debug\Microsoft.Owin.Security.dll
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\PerformersUpdater\bin\Debug\Owin.dll
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\PerformersUpdater\bin\Debug\Microsoft.Owin.Security.Cookies.dll
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\PerformersUpdater\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\PerformersUpdater\bin\Debug\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\PerformersUpdater\bin\Debug\PagedList.dll
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\PerformersUpdater\bin\Debug\WebGrease.dll
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\PerformersUpdater\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\PerformersUpdater\bin\Debug\System.Web.Razor.dll
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\PerformersUpdater\bin\Debug\System.Web.WebPages.Razor.dll
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\PerformersUpdater\bin\Debug\System.Web.WebPages.dll
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\PerformersUpdater\bin\Debug\Microsoft.Owin.Security.OAuth.dll
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\PerformersUpdater\bin\Debug\Newtonsoft.Json.dll
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\PerformersUpdater\bin\Debug\Antlr3.Runtime.dll
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\PerformersUpdater\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\PerformersUpdater\bin\Debug\AmDmSite.pdb
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\PerformersUpdater\bin\Debug\EntityFramework.xml
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\PerformersUpdater\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\PerformersUpdater\bin\Debug\HtmlAgilityPack.pdb
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\PerformersUpdater\bin\Debug\HtmlAgilityPack.xml
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\PerformersUpdater\bin\Debug\Microsoft.Owin.xml
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\PerformersUpdater\bin\Debug\System.Web.Optimization.xml
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\PerformersUpdater\bin\Debug\System.Web.Mvc.xml
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\PerformersUpdater\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\PerformersUpdater\bin\Debug\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\PerformersUpdater\bin\Debug\Microsoft.Owin.Security.xml
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\PerformersUpdater\bin\Debug\Microsoft.Owin.Security.Cookies.xml
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\PerformersUpdater\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\PerformersUpdater\bin\Debug\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\PerformersUpdater\bin\Debug\PagedList.xml
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\PerformersUpdater\bin\Debug\System.Web.Razor.xml
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\PerformersUpdater\bin\Debug\System.Web.WebPages.Razor.xml
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\PerformersUpdater\bin\Debug\System.Web.WebPages.xml
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\PerformersUpdater\bin\Debug\Microsoft.Owin.Security.OAuth.xml
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\PerformersUpdater\bin\Debug\Newtonsoft.Json.xml
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\PerformersUpdater\bin\Debug\Antlr3.Runtime.pdb
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\PerformersUpdater\bin\Debug\System.Web.WebPages.Deployment.xml
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\PerformersUpdater\bin\Debug\ru\EntityFramework.resources.dll
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\PerformersUpdater\bin\Debug\ru\EntityFramework.SqlServer.resources.dll
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\PerformersUpdater\bin\Debug\ru\System.Web.Optimization.resources.dll
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\PerformersUpdater\bin\Debug\ru\System.Web.Mvc.resources.dll
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\PerformersUpdater\bin\Debug\ru\Microsoft.AspNet.Identity.Core.resources.dll
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\PerformersUpdater\bin\Debug\ru\Microsoft.AspNet.Identity.Owin.resources.dll
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\PerformersUpdater\bin\Debug\ru\Microsoft.AspNet.Identity.EntityFramework.resources.dll
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\PerformersUpdater\bin\Debug\ru\System.Web.Razor.resources.dll
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\PerformersUpdater\bin\Debug\ru\System.Web.WebPages.Razor.resources.dll
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\PerformersUpdater\bin\Debug\ru\System.Web.WebPages.resources.dll
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\PerformersUpdater\bin\Debug\ru\System.Web.WebPages.Deployment.resources.dll
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\PerformersUpdater\obj\Debug\PerformersUpdater.csprojResolveAssemblyReference.cache
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\PerformersUpdater\obj\Debug\PerformersUpdater.exe
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\PerformersUpdater\obj\Debug\PerformersUpdater.pdb
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\PerformersUpdater\bin\Debug\NLog.config
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\PerformersUpdater\bin\Debug\NLog.dll
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\PerformersUpdater\bin\Debug\NLog.xml
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\PerformersUpdater\bin\Debug\Microsoft.AspNet.SignalR.Core.dll
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\PerformersUpdater\bin\Debug\Microsoft.AspNet.SignalR.SystemWeb.dll
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\PerformersUpdater\bin\Debug\Microsoft.AspNet.SignalR.Core.xml
+C:\Users\ZeenBook\Downloads\AmDm_Site-master (3)\AmDm_Site-master\AmDmSite\PerformersUpdater\bin\Debug\Microsoft.AspNet.SignalR.SystemWeb.xml
+D:\Установщики\AmDmSite\PerformersUpdater\bin\Debug\roslyn\csc.exe
+D:\Установщики\AmDmSite\PerformersUpdater\bin\Debug\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Установщики\AmDmSite\PerformersUpdater\bin\Debug\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Установщики\AmDmSite\PerformersUpdater\bin\Debug\roslyn\Microsoft.CodeAnalysis.dll
+D:\Установщики\AmDmSite\PerformersUpdater\bin\Debug\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Установщики\AmDmSite\PerformersUpdater\bin\Debug\roslyn\Microsoft.CSharp.Core.targets
+D:\Установщики\AmDmSite\PerformersUpdater\bin\Debug\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Установщики\AmDmSite\PerformersUpdater\bin\Debug\roslyn\System.Collections.Immutable.dll
+D:\Установщики\AmDmSite\PerformersUpdater\bin\Debug\roslyn\System.Reflection.Metadata.dll
+D:\Установщики\AmDmSite\PerformersUpdater\bin\Debug\roslyn\vbc.exe
+D:\Установщики\AmDmSite\PerformersUpdater\bin\Debug\roslyn\VBCSCompiler.exe
+D:\Установщики\AmDmSite\PerformersUpdater\bin\Debug\roslyn\VBCSCompiler.exe.config
+D:\Установщики\AmDmSite\PerformersUpdater\bin\Debug\NLog.config
+D:\Установщики\AmDmSite\PerformersUpdater\bin\Debug\PerformersUpdater.exe.config
+D:\Установщики\AmDmSite\PerformersUpdater\bin\Debug\PerformersUpdater.exe
+D:\Установщики\AmDmSite\PerformersUpdater\bin\Debug\PerformersUpdater.pdb
+D:\Установщики\AmDmSite\PerformersUpdater\bin\Debug\AmDmSite.dll
+D:\Установщики\AmDmSite\PerformersUpdater\bin\Debug\EntityFramework.dll
+D:\Установщики\AmDmSite\PerformersUpdater\bin\Debug\EntityFramework.SqlServer.dll
+D:\Установщики\AmDmSite\PerformersUpdater\bin\Debug\HtmlAgilityPack.dll
+D:\Установщики\AmDmSite\PerformersUpdater\bin\Debug\Microsoft.AspNet.SignalR.Core.dll
+D:\Установщики\AmDmSite\PerformersUpdater\bin\Debug\Microsoft.AspNet.SignalR.SystemWeb.dll
+D:\Установщики\AmDmSite\PerformersUpdater\bin\Debug\Microsoft.Owin.dll
+D:\Установщики\AmDmSite\PerformersUpdater\bin\Debug\Microsoft.Owin.Host.SystemWeb.dll
+D:\Установщики\AmDmSite\PerformersUpdater\bin\Debug\Microsoft.Owin.Security.dll
+D:\Установщики\AmDmSite\PerformersUpdater\bin\Debug\Newtonsoft.Json.dll
+D:\Установщики\AmDmSite\PerformersUpdater\bin\Debug\NLog.dll
+D:\Установщики\AmDmSite\PerformersUpdater\bin\Debug\Owin.dll
+D:\Установщики\AmDmSite\PerformersUpdater\bin\Debug\System.Web.Optimization.dll
+D:\Установщики\AmDmSite\PerformersUpdater\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+D:\Установщики\AmDmSite\PerformersUpdater\bin\Debug\Microsoft.AspNet.Identity.Owin.dll
+D:\Установщики\AmDmSite\PerformersUpdater\bin\Debug\Microsoft.Owin.Security.Cookies.dll
+D:\Установщики\AmDmSite\PerformersUpdater\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Установщики\AmDmSite\PerformersUpdater\bin\Debug\PagedList.dll
+D:\Установщики\AmDmSite\PerformersUpdater\bin\Debug\System.Web.Razor.dll
+D:\Установщики\AmDmSite\PerformersUpdater\bin\Debug\System.Web.WebPages.Razor.dll
+D:\Установщики\AmDmSite\PerformersUpdater\bin\Debug\System.Web.WebPages.dll
+D:\Установщики\AmDmSite\PerformersUpdater\bin\Debug\Microsoft.Web.Infrastructure.dll
+D:\Установщики\AmDmSite\PerformersUpdater\bin\Debug\WebGrease.dll
+D:\Установщики\AmDmSite\PerformersUpdater\bin\Debug\Microsoft.Owin.Security.OAuth.dll
+D:\Установщики\AmDmSite\PerformersUpdater\bin\Debug\System.Web.WebPages.Deployment.dll
+D:\Установщики\AmDmSite\PerformersUpdater\bin\Debug\Antlr3.Runtime.dll
+D:\Установщики\AmDmSite\PerformersUpdater\bin\Debug\AmDmSite.pdb
+D:\Установщики\AmDmSite\PerformersUpdater\bin\Debug\EntityFramework.xml
+D:\Установщики\AmDmSite\PerformersUpdater\bin\Debug\EntityFramework.SqlServer.xml
+D:\Установщики\AmDmSite\PerformersUpdater\bin\Debug\HtmlAgilityPack.pdb
+D:\Установщики\AmDmSite\PerformersUpdater\bin\Debug\HtmlAgilityPack.xml
+D:\Установщики\AmDmSite\PerformersUpdater\bin\Debug\Microsoft.AspNet.SignalR.Core.xml
+D:\Установщики\AmDmSite\PerformersUpdater\bin\Debug\Microsoft.AspNet.SignalR.SystemWeb.xml
+D:\Установщики\AmDmSite\PerformersUpdater\bin\Debug\Microsoft.Owin.xml
+D:\Установщики\AmDmSite\PerformersUpdater\bin\Debug\Microsoft.Owin.Host.SystemWeb.xml
+D:\Установщики\AmDmSite\PerformersUpdater\bin\Debug\Microsoft.Owin.Security.xml
+D:\Установщики\AmDmSite\PerformersUpdater\bin\Debug\Newtonsoft.Json.xml
+D:\Установщики\AmDmSite\PerformersUpdater\bin\Debug\NLog.xml
+D:\Установщики\AmDmSite\PerformersUpdater\bin\Debug\System.Web.Mvc.xml
+D:\Установщики\AmDmSite\PerformersUpdater\bin\Debug\System.Web.Optimization.xml
+D:\Установщики\AmDmSite\PerformersUpdater\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+D:\Установщики\AmDmSite\PerformersUpdater\bin\Debug\Microsoft.AspNet.Identity.Owin.xml
+D:\Установщики\AmDmSite\PerformersUpdater\bin\Debug\Microsoft.Owin.Security.Cookies.xml
+D:\Установщики\AmDmSite\PerformersUpdater\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Установщики\AmDmSite\PerformersUpdater\bin\Debug\PagedList.xml
+D:\Установщики\AmDmSite\PerformersUpdater\bin\Debug\System.Web.Razor.xml
+D:\Установщики\AmDmSite\PerformersUpdater\bin\Debug\System.Web.WebPages.Razor.xml
+D:\Установщики\AmDmSite\PerformersUpdater\bin\Debug\System.Web.WebPages.xml
+D:\Установщики\AmDmSite\PerformersUpdater\bin\Debug\Microsoft.Owin.Security.OAuth.xml
+D:\Установщики\AmDmSite\PerformersUpdater\bin\Debug\System.Web.WebPages.Deployment.xml
+D:\Установщики\AmDmSite\PerformersUpdater\bin\Debug\Antlr3.Runtime.pdb
+D:\Установщики\AmDmSite\PerformersUpdater\bin\Debug\ru\EntityFramework.resources.dll
+D:\Установщики\AmDmSite\PerformersUpdater\bin\Debug\ru\EntityFramework.SqlServer.resources.dll
+D:\Установщики\AmDmSite\PerformersUpdater\bin\Debug\ru\System.Web.Mvc.resources.dll
+D:\Установщики\AmDmSite\PerformersUpdater\bin\Debug\ru\System.Web.Optimization.resources.dll
+D:\Установщики\AmDmSite\PerformersUpdater\bin\Debug\ru\Microsoft.AspNet.Identity.Core.resources.dll
+D:\Установщики\AmDmSite\PerformersUpdater\bin\Debug\ru\Microsoft.AspNet.Identity.Owin.resources.dll
+D:\Установщики\AmDmSite\PerformersUpdater\bin\Debug\ru\Microsoft.AspNet.Identity.EntityFramework.resources.dll
+D:\Установщики\AmDmSite\PerformersUpdater\bin\Debug\ru\System.Web.Razor.resources.dll
+D:\Установщики\AmDmSite\PerformersUpdater\bin\Debug\ru\System.Web.WebPages.Razor.resources.dll
+D:\Установщики\AmDmSite\PerformersUpdater\bin\Debug\ru\System.Web.WebPages.resources.dll
+D:\Установщики\AmDmSite\PerformersUpdater\bin\Debug\ru\System.Web.WebPages.Deployment.resources.dll
+D:\Установщики\AmDmSite\PerformersUpdater\obj\Debug\PerformersUpdater.csprojResolveAssemblyReference.cache
+D:\Установщики\AmDmSite\PerformersUpdater\obj\Debug\PerformersUpdater.exe
+D:\Установщики\AmDmSite\PerformersUpdater\obj\Debug\PerformersUpdater.pdb

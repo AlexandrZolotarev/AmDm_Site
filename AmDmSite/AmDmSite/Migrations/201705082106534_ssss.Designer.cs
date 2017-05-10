@@ -7,13 +7,13 @@ namespace AmDmSite.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class ConsoleProjectMigration : IMigrationMetadata
+    public sealed partial class ssss : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(ConsoleProjectMigration));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(ssss));
         
         string IMigrationMetadata.Id
         {
-            get { return "201705061336067_ConsoleProjectMigration"; }
+            get { return "201705082106534_ssss"; }
         }
         
         string IMigrationMetadata.Source

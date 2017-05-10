@@ -12,7 +12,10 @@
         text-align: center;
     }
 </style>
-
+<div style="position: absolute; left: 50%;">
+  <span id="notification" style="color:red;font-size:15px; position: relative; left: -50%;"></span>
+</div>  
+      
 <h1>@ViewBag.PerformerName</h1>
 @if (ViewBag.PerformerBiography != "")
 {
@@ -49,3 +52,20 @@
 </table>
 
 @Html.PagedListPager(Model, page => Url.Action("Performer", new { ViewBag.PerformerId, page }))
+@section scripts{
+    <script src="~/Scripts/jquery.signalR-2.2.2.min.js"></script>
+    <!--Ссылка на автоматически сгенерированный скрипт хаба SignalR -->
+    <script src="~/signalr/hubs"></script>
+    <script src="~/signalr/hubs"></script>
+    <script type="text/javascript">
+
+       $(function () {
+           var notificationhub = $.connection.notificationHub;
+           notificationhub.client.displayMessage = function (message) {
+               $('#notification').html("<div class=\"alert alert-info alert-dismissable\"><a href=\"#\" class=\"close\" data-dismiss=\"alert\" aria-label=\"close\">×</a><strong>Update! </strong>"+message+"</div>");
+           };
+           $.connection.hub.start();
+
+       });
+    </script>
+}   

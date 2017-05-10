@@ -1,4 +1,5 @@
 ﻿using AmDmSite.HtmlParser;
+using AmDmSite.Hubs;
 using AmDmSite.Models.SiteDataBase;
 using PagedList;
 using System;
@@ -16,8 +17,8 @@ namespace AmDmSite.Controllers
         public ActionResult Index(int? page, int? column, int? typeAscending)
 
         {
-         // HtmlAmDmParser.GetPerformersInfo();
-            SiteContext s = new SiteContext();
+            // HtmlAmDmParser.GetPerformersInfo();
+               SiteContext s = new SiteContext();
             List<Performer> performers = new List<Performer>(s.Performers);
             int pageSize = 10;
             int pageNumber = (page ?? 1);
@@ -28,7 +29,7 @@ namespace AmDmSite.Controllers
             ViewBag.NameType = 0;
             ViewBag.SongsType = 0;
             ViewBag.ViewsCountType = 0;
-
+            
             if (ascendType == -1)
                 return View(performers.ToPagedList(pageNumber, pageSize));
 
@@ -71,7 +72,12 @@ namespace AmDmSite.Controllers
             }
         }
 
-
+        
+        public ActionResult Create()
+        {
+            SendPushMessage("Добавлен новый объект");
+            return RedirectToAction("Index");
+        }
 
         public ActionResult PerformerB(int performerId, int? page, int? column, int? typeAscending) // must finish the sorting of the songs
         {
@@ -200,5 +206,11 @@ namespace AmDmSite.Controllers
             return View(song);
         }
 
+        [HttpGet]
+        public void SendPushMessage(string message)
+        {
+            var context = Microsoft.AspNet.SignalR.GlobalHost.ConnectionManager.GetHubContext<NotificationHub>();
+            context.Clients.All.displayMessage(message);
+        }
     }
 }
