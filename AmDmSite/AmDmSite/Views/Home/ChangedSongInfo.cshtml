@@ -7,6 +7,7 @@
     {
         @Html.ValidationSummary(true);
         @Html.HiddenFor(m => m.Id)
+        @Html.HiddenFor(m => m.PerformerId)
     <div class="text">
     @Html.TextAreaFor(m => m.Text, 40, 30, new { style = "width: 100%; max-width: 100%;" })
     </div>

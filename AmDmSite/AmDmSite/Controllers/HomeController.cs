@@ -219,10 +219,18 @@ namespace AmDmSite.Controllers
 
         public ActionResult ChangeSong(Song song)
         {
-        SiteContext siteDataBase = new SiteContext();
-        Song songToEdit = siteDataBase.Songs.FirstOrDefault(x => x.Id == song.Id);
+            SiteContext siteDataBase = new SiteContext();
+            Performer performer = cache.GetValue((int)song.PerformerId);
+            if (performer == null)
+            {
+                performer = siteDataBase.Performers.FirstOrDefault(x => x.Id == (int)song.PerformerId);
+                cache.Add(performer);
+            }
+            Song songToEdit = siteDataBase.Songs.FirstOrDefault(x => x.Id == song.Id);
                 songToEdit.Text = song.Text;
                 siteDataBase.SaveChanges();
+            performer = siteDataBase.Performers.FirstOrDefault(x => x.Id == (int)song.PerformerId);
+            cache.Update(performer);
                 return RedirectToAction("Song", new { performerId = songToEdit.PerformerId, songNumber = songToEdit.Number });
             
         }
