@@ -35,7 +35,7 @@ namespace AmDmSite.HtmlParser
                     siteHtml.LoadHtml(str);
                     var rows = siteHtml.DocumentNode.SelectNodes(".//tr");
 
-                    for (int i = 2; i <= 30; i++)
+                    for (int i = 3; i <= 30; i++)
                     {
                         //for (int i = 1; i <= 20; i++)
                         try
@@ -81,8 +81,7 @@ namespace AmDmSite.HtmlParser
 
             if (rows != null)
             {
-                //for (int i = 1; i < rows.Count; i++)
-                for (int i = 1; i < 3; i++)
+                for (int i = 1; i < rows.Count; i++)
                 {
                     Thread.Sleep(800);
                     try

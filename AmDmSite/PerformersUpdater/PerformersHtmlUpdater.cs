@@ -31,8 +31,10 @@ namespace PerformersUpdater
             catch
             {
                 logger.Error("Not found controller");
-                Console.WriteLine("!Not found controller.");
-                Console.ReadKey();
+            }
+            finally
+            {
+                logger.Info(DateTime.Now + " updated "+songsCounter+" songs");
             }
         }
 

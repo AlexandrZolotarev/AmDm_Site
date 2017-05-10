@@ -19,7 +19,6 @@ D:\AmDm_Site\AmDmSite\PerformersUpdater\bin\Debug\EntityFramework.SqlServer.dll
 D:\AmDm_Site\AmDmSite\PerformersUpdater\bin\Debug\HtmlAgilityPack.dll
 D:\AmDm_Site\AmDmSite\PerformersUpdater\bin\Debug\Microsoft.Owin.dll
 D:\AmDm_Site\AmDmSite\PerformersUpdater\bin\Debug\System.Web.Optimization.dll
-D:\AmDm_Site\AmDmSite\PerformersUpdater\bin\Debug\System.Web.Mvc.dll
 D:\AmDm_Site\AmDmSite\PerformersUpdater\bin\Debug\Microsoft.AspNet.Identity.Core.dll
 D:\AmDm_Site\AmDmSite\PerformersUpdater\bin\Debug\Microsoft.AspNet.Identity.Owin.dll
 D:\AmDm_Site\AmDmSite\PerformersUpdater\bin\Debug\Microsoft.Owin.Security.dll
@@ -61,14 +60,11 @@ D:\AmDm_Site\AmDmSite\PerformersUpdater\bin\Debug\Antlr3.Runtime.pdb
 D:\AmDm_Site\AmDmSite\PerformersUpdater\bin\Debug\System.Web.WebPages.Deployment.xml
 D:\AmDm_Site\AmDmSite\PerformersUpdater\bin\Debug\ru\EntityFramework.resources.dll
 D:\AmDm_Site\AmDmSite\PerformersUpdater\bin\Debug\ru\EntityFramework.SqlServer.resources.dll
-D:\AmDm_Site\AmDmSite\PerformersUpdater\bin\Debug\ru\Microsoft.Owin.resources.dll
 D:\AmDm_Site\AmDmSite\PerformersUpdater\bin\Debug\ru\System.Web.Optimization.resources.dll
 D:\AmDm_Site\AmDmSite\PerformersUpdater\bin\Debug\ru\System.Web.Mvc.resources.dll
 D:\AmDm_Site\AmDmSite\PerformersUpdater\bin\Debug\ru\Microsoft.AspNet.Identity.Core.resources.dll
 D:\AmDm_Site\AmDmSite\PerformersUpdater\bin\Debug\ru\Microsoft.AspNet.Identity.Owin.resources.dll
-D:\AmDm_Site\AmDmSite\PerformersUpdater\bin\Debug\ru\Microsoft.Owin.Security.resources.dll
 D:\AmDm_Site\AmDmSite\PerformersUpdater\bin\Debug\ru\Microsoft.AspNet.Identity.EntityFramework.resources.dll
-D:\AmDm_Site\AmDmSite\PerformersUpdater\bin\Debug\ru\Microsoft.Owin.Host.SystemWeb.resources.dll
 D:\AmDm_Site\AmDmSite\PerformersUpdater\bin\Debug\ru\System.Web.Razor.resources.dll
 D:\AmDm_Site\AmDmSite\PerformersUpdater\bin\Debug\ru\System.Web.WebPages.Razor.resources.dll
 D:\AmDm_Site\AmDmSite\PerformersUpdater\bin\Debug\ru\System.Web.WebPages.resources.dll
@@ -238,3 +234,10 @@ D:\Установщики\AmDmSite\PerformersUpdater\bin\Debug\ru\System.Web.Web
 D:\Установщики\AmDmSite\PerformersUpdater\obj\Debug\PerformersUpdater.csprojResolveAssemblyReference.cache
 D:\Установщики\AmDmSite\PerformersUpdater\obj\Debug\PerformersUpdater.exe
 D:\Установщики\AmDmSite\PerformersUpdater\obj\Debug\PerformersUpdater.pdb
+D:\AmDm_Site\AmDmSite\PerformersUpdater\bin\Debug\NLog.config
+D:\AmDm_Site\AmDmSite\PerformersUpdater\bin\Debug\Microsoft.AspNet.SignalR.Core.dll
+D:\AmDm_Site\AmDmSite\PerformersUpdater\bin\Debug\Microsoft.AspNet.SignalR.SystemWeb.dll
+D:\AmDm_Site\AmDmSite\PerformersUpdater\bin\Debug\NLog.dll
+D:\AmDm_Site\AmDmSite\PerformersUpdater\bin\Debug\Microsoft.AspNet.SignalR.Core.xml
+D:\AmDm_Site\AmDmSite\PerformersUpdater\bin\Debug\Microsoft.AspNet.SignalR.SystemWeb.xml
+D:\AmDm_Site\AmDmSite\PerformersUpdater\bin\Debug\NLog.xml

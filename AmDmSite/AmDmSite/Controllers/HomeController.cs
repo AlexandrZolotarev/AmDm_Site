@@ -8,28 +8,38 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.UI;
+using AmDmSite.Cache;
 
 namespace AmDmSite.Controllers
 {
     public class HomeController : Controller
     {
-        [OutputCache(Duration = 30, Location = OutputCacheLocation.Downstream)]
-        public ActionResult Index(int? page, int? column, int? typeAscending)
 
+        SiteCache cache;
+
+        public HomeController()
         {
+            cache = new SiteCache();
+        }
+
+
+        public ActionResult Index(int? page, int? column, int? typeAscending)
+        {
+
             // HtmlAmDmParser.GetPerformersInfo();
-               SiteContext s = new SiteContext();
+            SiteContext s = new SiteContext();
+
             List<Performer> performers = new List<Performer>(s.Performers);
+
             int pageSize = 10;
             int pageNumber = (page ?? 1);
             int colNumber = (column ?? 0);
             int ascendType = (typeAscending ?? -1);
-
             ViewBag.Page = pageNumber;
             ViewBag.NameType = 0;
             ViewBag.SongsType = 0;
             ViewBag.ViewsCountType = 0;
-            
+
             if (ascendType == -1)
                 return View(performers.ToPagedList(pageNumber, pageSize));
 
@@ -52,10 +62,11 @@ namespace AmDmSite.Controllers
                         ViewBag.SongsType = 1;
                         return View(performers.OrderBy(x => x.Songs.Count).ToPagedList(pageNumber, pageSize));
                     }
-                    else {
+                    else
+                    {
                         ViewBag.SongsType = 0;
                         return View(performers.OrderByDescending(x => x.Songs.Count).ToPagedList(pageNumber, pageSize));
-            }
+                    }
                 case 3:
 
                     if (ascendType == 0)
@@ -70,7 +81,8 @@ namespace AmDmSite.Controllers
                     }
                 default: return View(performers.ToPagedList(pageNumber, pageSize));
             }
-        }
+        }  
+        
 
         
         public ActionResult Create()
@@ -81,8 +93,8 @@ namespace AmDmSite.Controllers
 
         public ActionResult PerformerB(int performerId, int? page, int? column, int? typeAscending) // must finish the sorting of the songs
         {
-            using (SiteContext siteDataBase = new SiteContext())
-            {
+            SiteContext siteDataBase = new SiteContext();
+            
                 Performer performer = siteDataBase.Performers.FirstOrDefault(x => x.Id == performerId);
                 ViewBag.PerformerName = performer.Name;
                 ViewBag.PerformerBiography = performer.Biography;
@@ -128,7 +140,7 @@ namespace AmDmSite.Controllers
                         }
                     default: return View(performer.Songs.ToPagedList(pageNumber, pageSize));
                 }
-            }
+            
         }
 
 
@@ -146,39 +158,55 @@ namespace AmDmSite.Controllers
             return View();
         }
 
-        [OutputCache(Duration = 30, Location = OutputCacheLocation.Downstream)]
         public ActionResult Performer(int performerId, int? page)
         {
-            using (SiteContext siteDataBase = new SiteContext())
-            {
-                Performer performer = siteDataBase.Performers.FirstOrDefault(x => x.Id == performerId);
-                ViewBag.PerformerName = performer.Name;
-                ViewBag.PerformerBiography = performer.Biography;
-                ViewBag.PerformerId = performerId;
-                int pageSize = 10;
-                int pageNumber = (page ?? 1);
-                if (pageNumber == 1) performer.ViewsCount++;
-                siteDataBase.SaveChanges();
-                return View(performer.Songs.ToPagedList(pageNumber, pageSize));
-            }
-        }
-        [OutputCache(Duration = 30, Location = OutputCacheLocation.Downstream)]
-        public ActionResult Song(int performerId, int songNumber)
-        {
             SiteContext siteDataBase = new SiteContext();
-            Performer performer = siteDataBase.Performers.FirstOrDefault(x => x.Id == performerId);
-            Song song = performer.Songs.FirstOrDefault(x => x.Number == songNumber);
-            song.ViewsCount++;
+            Performer performer = cache.GetValue(performerId) as Performer;
+            if (performer == null)
+            {
+
+                performer = siteDataBase.Performers.FirstOrDefault(x => x.Id == performerId);
+
+                cache.Add(performer);
+            }
+            ViewBag.PerformerName = performer.Name;
+            ViewBag.PerformerBiography = performer.Biography;
+            ViewBag.PerformerId = performerId;
+            int pageSize = 10;
+            int pageNumber = (page ?? 1);
+            if (pageNumber == 1) performer.ViewsCount++;
             siteDataBase.SaveChanges();
-            ViewBag.NextSong = performer.Songs.Count > song.Number + 1 ? song.Number + 1 : -1;
-            ViewBag.PreviousSong = song.Number > 1 ? song.Number - 1 : -1;
-            return View(song);
+            cache.Update(performer);
+            return View(performer.Songs.ToPagedList(pageNumber, pageSize));
         }
-        [OutputCache(Duration = 30, Location = OutputCacheLocation.Downstream)]
+        
+
+    public ActionResult Song(int performerId, int songNumber)
+    {
+        SiteContext siteDataBase = new SiteContext();
+        Performer performer = cache.GetValue(performerId);
+        if (performer == null)
+        {
+            performer = siteDataBase.Performers.FirstOrDefault(x => x.Id == performerId);
+            cache.Add(performer);
+        }
+        Song song = performer.Songs.FirstOrDefault(x => x.Number == songNumber);
+        song.ViewsCount++;
+        siteDataBase.SaveChanges();
+        ViewBag.NextSong = performer.Songs.Count > song.Number + 1 ? song.Number + 1 : -1;
+        ViewBag.PreviousSong = song.Number > 1 ? song.Number - 1 : -1;
+        return View(song);
+    }
+
         public ActionResult SongInfo(int performerId, int songNumber)
         {
-            SiteContext siteDataBase = new SiteContext();
-            Performer performer = siteDataBase.Performers.FirstOrDefault(x => x.Id == performerId);
+        SiteContext siteDataBase = new SiteContext();
+        Performer performer = cache.GetValue(performerId);
+            if (performer == null)
+            {            
+                performer = siteDataBase.Performers.FirstOrDefault(x => x.Id == performerId);
+                cache.Add(performer);
+            }
             Song song = performer.Songs.FirstOrDefault(x => x.Number == songNumber);
             song.ViewsCount++;
             siteDataBase.SaveChanges();
@@ -191,19 +219,21 @@ namespace AmDmSite.Controllers
 
         public ActionResult ChangeSong(Song song)
         {
-            SiteContext siteDataBase = new SiteContext();
-            Song songToEdit = siteDataBase.Songs.FirstOrDefault(x => x.Id == song.Id);
-            songToEdit.Text = song.Text;
-            siteDataBase.SaveChanges();
-            return RedirectToAction("Song", new { performerId = songToEdit.PerformerId, songNumber = songToEdit.Number });
+        SiteContext siteDataBase = new SiteContext();
+        Song songToEdit = siteDataBase.Songs.FirstOrDefault(x => x.Id == song.Id);
+                songToEdit.Text = song.Text;
+                siteDataBase.SaveChanges();
+                return RedirectToAction("Song", new { performerId = songToEdit.PerformerId, songNumber = songToEdit.Number });
+            
         }
 
         public ActionResult ChangedSongInfo(int performerId, int songNumber)
         {
-            SiteContext siteDataBase = new SiteContext();
-            Performer performer = siteDataBase.Performers.FirstOrDefault(x => x.Id == performerId);
-            Song song = performer.Songs.FirstOrDefault(x => x.Number == songNumber);
-            return View(song);
+        SiteContext siteDataBase = new SiteContext();
+        Performer performer = siteDataBase.Performers.FirstOrDefault(x => x.Id == performerId);
+                Song song = performer.Songs.FirstOrDefault(x => x.Number == songNumber);
+                return View(song);
+            
         }
 
         [HttpGet]
