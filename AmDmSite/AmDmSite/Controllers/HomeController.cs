@@ -25,12 +25,8 @@ namespace AmDmSite.Controllers
 
         public ActionResult Index(int? page, int? column, int? typeAscending)
         {
-
-            // HtmlAmDmParser.GetPerformersInfo();
             SiteContext s = new SiteContext();
-
             List<Performer> performers = new List<Performer>(s.Performers);
-
             int pageSize = 10;
             int pageNumber = (page ?? 1);
             int colNumber = (column ?? 0);
@@ -83,7 +79,7 @@ namespace AmDmSite.Controllers
             }
         }
 
-        public ActionResult Performer(int? performerId, int? page, int? column, int? typeAscending) // must finish the sorting of the songs
+        public ActionResult Performer(int? performerId, int? page, int? column, int? typeAscending)
         {
 
             if (performerId == null)
@@ -137,9 +133,6 @@ namespace AmDmSite.Controllers
 
         }
 
-
-
-
         [OutputCache(Duration = 30, Location = OutputCacheLocation.Downstream)]
         public ActionResult About()
         {
@@ -151,29 +144,6 @@ namespace AmDmSite.Controllers
         {
             return View();
         }
-
-        //public ActionResult Performer(int performerId, int? page)
-        //{
-        //    SiteContext siteDataBase = new SiteContext();
-        //    Performer performer = cache.GetValue(performerId) as Performer;
-        //    if (performer == null)
-        //    {
-
-        //        performer = siteDataBase.Performers.FirstOrDefault(x => x.Id == performerId);
-
-        //        cache.Add(performer);
-        //    }
-        //    ViewBag.PerformerName = performer.Name;
-        //    ViewBag.PerformerBiography = performer.Biography;
-        //    ViewBag.PerformerId = performerId;
-        //    int pageSize = 10;
-        //    int pageNumber = (page ?? 1);
-        //    if (pageNumber == 1) performer.ViewsCount++;
-        //    siteDataBase.SaveChanges();
-        //    cache.Update(performer);
-        //    return View(performer.Songs.ToPagedList(pageNumber, pageSize));
-        //}
-        
 
     public ActionResult Song(int performerId, int songNumber)
     {

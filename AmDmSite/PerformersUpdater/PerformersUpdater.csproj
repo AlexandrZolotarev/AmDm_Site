@@ -101,6 +101,8 @@
     <Compile Include="Models\Accord.cs" />
     <Compile Include="C__MigrationHistory.cs" />
     <Compile Include="Models\Performer.cs" />
+    <Compile Include="ParserContainer.cs" />
+    <Compile Include="PerformersHtmlParser.cs" />
     <Compile Include="PerformersHtmlUpdater.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Models\SiteDataBase.cs" />
