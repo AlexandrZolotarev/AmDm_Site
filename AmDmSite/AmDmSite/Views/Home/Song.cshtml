@@ -3,27 +3,20 @@
 
 <style>
     .Accords{
-        list-style-type: none;
+        list-style-type:none;
     }
-
-    .priviousButton{
-        float: left;
-    }
-
-    .nextButton{
-        float: right;
-    }
-
     .Accords li{
         display: inline-block;
     }
+
 </style>
+
 <div style="position: absolute; left: 50%;">
     <span id="notification" style="color:red;font-size:15px; position: relative; left: -50%;"></span>
 </div>  
 <div id="songInfo">
 <h1>@Model.Performer.Name - @Model.Name</h1>
-<div class="col-md-4 priviousButton">
+<div class="col-md-4 priviousButton" style="float: left">
 @if (ViewBag.PreviousSong != -1)
 {
 @(Ajax.ActionLink("Назад", "SongInfo", "Home", new { performerId = Model.PerformerId, songNumber = ViewBag.PreviousSong }, new AjaxOptions { UpdateTargetId = "songInfo" }, new { onclick = "link()" }))
@@ -35,7 +28,7 @@
 @(Ajax.ActionLink("Редактировать", "ChangedSongInfo", "Home", new { performerId = Model.PerformerId, songNumber = Model.Number }, new AjaxOptions { UpdateTargetId = "change" }))
 }
 </div>
-<div class="col-md-4 priviousButton">
+<div class="col-md-4 nextButton" style="float: right;">
 @if (ViewBag.NextSong != -1)
 {
 @(Ajax.ActionLink("Вперед", "SongInfo", "Home", new { performerId = Model.PerformerId, songNumber = ViewBag.NextSong }, new AjaxOptions { UpdateTargetId = "songInfo" }, new { onclick = "link()" }))
@@ -59,18 +52,35 @@
 <a class="photo" id="photo"><img src=@accord.PathToPicture title=@accord.Name width="80"> </a>
 </li>
 }
-
 </ul>
 </div>
 </div>
 </div>
+<input name="tags-input" class="form-control" id="tags-input" type="text" autocomplete="on">
 @section scripts{
 <script src="~/Scripts/jquery.signalR-2.2.2.min.js"></script>
 <script src="~/signalr/hubs"></script>
 <script src="~/signalr/hubs"></script>
 <script type="text/javascript">
 
-$(function () {
+    $(function () {
+
+        $(document).ready(function () {
+            $("#tags-input").tagsinput(
+            {
+                typeahead: { source: ["Item 1", "Item 2", "Item 3", "Item 4", "Item 5", "Item 6", "Item 7"] }
+            });
+
+            // Handle the event that fires when a tag is added
+            $("#tags-input").on('itemAdded', function (event) {
+                // Hide the Bootstrap 3 Typeahead dropdown menu since it doesn't hide automatically for some reason
+                $(".typeahead.dropdown-menu").hide();
+
+                // Clear the value of the tagsinput's internal <input> element, which is used for adding tags
+                $(this).tagsinput('input').val("");
+            });
+        });
+
 var notificationhub = $.connection.notificationHub;
 notificationhub.client.displayMessage = function (message) {
 $('#notification').html("<div class=\"alert alert-info alert-dismissable\"><a href=\"#\" class=\"close\" data-dismiss=\"alert\" aria-label=\"close\">×</a><strong>Update! </strong>" + message + "</div>");
@@ -78,5 +88,8 @@ $('#notification').html("<div class=\"alert alert-info alert-dismissable\"><a hr
 $.connection.hub.start();
 
 });
+
+
+
 </script>
 }
