@@ -81,66 +81,60 @@ namespace AmDmSite.Controllers
                     }
                 default: return View(performers.ToPagedList(pageNumber, pageSize));
             }
-        }  
-        
-
-        
-        public ActionResult Create()
-        {
-            SendPushMessage("Добавлен новый объект");
-            return RedirectToAction("Index");
         }
 
-        public ActionResult PerformerB(int performerId, int? page, int? column, int? typeAscending) // must finish the sorting of the songs
+        public ActionResult Performer(int? performerId, int? page, int? column, int? typeAscending) // must finish the sorting of the songs
         {
+
+            if (performerId == null)
+                return RedirectToAction("Index");
             SiteContext siteDataBase = new SiteContext();
-            
-                Performer performer = siteDataBase.Performers.FirstOrDefault(x => x.Id == performerId);
-                ViewBag.PerformerName = performer.Name;
-                ViewBag.PerformerBiography = performer.Biography;
-                ViewBag.PerformerId = performerId;
-                int pageSize = 20;
-                int pageNumber = (page ?? 1);
-                int colNumber = (column ?? 0);
-                int ascendType = (typeAscending ?? -1);
-                if (pageNumber == 1) performer.ViewsCount++;
-                siteDataBase.SaveChanges();
-               
-                ViewBag.Page = pageNumber;
-                ViewBag.NameType = 0;
-                ViewBag.SongsType = 0;
-                ViewBag.ViewsCountType = 0;
+            Performer performer = siteDataBase.Performers.FirstOrDefault(x => x.Id == performerId);
+            ViewBag.PerformerName = performer.Name;
+            ViewBag.PerformerBiography = performer.Biography;
+            ViewBag.PerformerId = performerId;
+            int pageSize = 20;
+            int pageNumber = (page ?? 1);
+            int colNumber = (column ?? 0);
+            int ascendType = (typeAscending ?? -1);
+            if (pageNumber == 1) performer.ViewsCount++;
+            siteDataBase.SaveChanges();
 
-                if (ascendType == -1)
-                    return View(performer.Songs.ToPagedList(pageNumber, pageSize));
+            ViewBag.Page = pageNumber;
+            ViewBag.NameType = 0;
+            ViewBag.SongsType = 0;
+            ViewBag.ViewsCountType = 0;
 
-                switch (column)
-                {
-                    case 1:
-                        if (ascendType == 0)
-                        {
-                            ViewBag.NameType = 1;
-                            return View(performer.Songs.OrderBy(x => x.Name).ToPagedList(pageNumber, pageSize));
-                        }
-                        else
-                        {
-                            ViewBag.NameType = 0;
-                            return View(performer.Songs.OrderByDescending(x => x.Name).ToPagedList(pageNumber, pageSize));
-                        }
-                    case 2:
-                        if (ascendType == 0)
-                        {
-                            ViewBag.SongsType = 1;
-                            return View(performer.Songs.OrderBy(x => x.ViewsCount).ToPagedList(pageNumber, pageSize));
-                        }
-                        else
-                        {
-                            ViewBag.SongsType = 0;
-                            return View(performer.Songs.OrderByDescending(x => x.ViewsCount).ToPagedList(pageNumber, pageSize));
-                        }
-                    default: return View(performer.Songs.ToPagedList(pageNumber, pageSize));
-                }
-            
+            if (ascendType == -1)
+                return View(performer.Songs.ToPagedList(pageNumber, pageSize));
+
+            switch (column)
+            {
+                case 1:
+                    if (ascendType == 0)
+                    {
+                        ViewBag.NameType = 1;
+                        return View(performer.Songs.OrderBy(x => x.Name).ToPagedList(pageNumber, pageSize));
+                    }
+                    else
+                    {
+                        ViewBag.NameType = 0;
+                        return View(performer.Songs.OrderByDescending(x => x.Name).ToPagedList(pageNumber, pageSize));
+                    }
+                case 2:
+                    if (ascendType == 0)
+                    {
+                        ViewBag.SongsType = 1;
+                        return View(performer.Songs.OrderBy(x => x.ViewsCount).ToPagedList(pageNumber, pageSize));
+                    }
+                    else
+                    {
+                        ViewBag.SongsType = 0;
+                        return View(performer.Songs.OrderByDescending(x => x.ViewsCount).ToPagedList(pageNumber, pageSize));
+                    }
+                default: return View(performer.Songs.ToPagedList(pageNumber, pageSize));
+            }
+
         }
 
 
@@ -158,27 +152,27 @@ namespace AmDmSite.Controllers
             return View();
         }
 
-        public ActionResult Performer(int performerId, int? page)
-        {
-            SiteContext siteDataBase = new SiteContext();
-            Performer performer = cache.GetValue(performerId) as Performer;
-            if (performer == null)
-            {
+        //public ActionResult Performer(int performerId, int? page)
+        //{
+        //    SiteContext siteDataBase = new SiteContext();
+        //    Performer performer = cache.GetValue(performerId) as Performer;
+        //    if (performer == null)
+        //    {
 
-                performer = siteDataBase.Performers.FirstOrDefault(x => x.Id == performerId);
+        //        performer = siteDataBase.Performers.FirstOrDefault(x => x.Id == performerId);
 
-                cache.Add(performer);
-            }
-            ViewBag.PerformerName = performer.Name;
-            ViewBag.PerformerBiography = performer.Biography;
-            ViewBag.PerformerId = performerId;
-            int pageSize = 10;
-            int pageNumber = (page ?? 1);
-            if (pageNumber == 1) performer.ViewsCount++;
-            siteDataBase.SaveChanges();
-            cache.Update(performer);
-            return View(performer.Songs.ToPagedList(pageNumber, pageSize));
-        }
+        //        cache.Add(performer);
+        //    }
+        //    ViewBag.PerformerName = performer.Name;
+        //    ViewBag.PerformerBiography = performer.Biography;
+        //    ViewBag.PerformerId = performerId;
+        //    int pageSize = 10;
+        //    int pageNumber = (page ?? 1);
+        //    if (pageNumber == 1) performer.ViewsCount++;
+        //    siteDataBase.SaveChanges();
+        //    cache.Update(performer);
+        //    return View(performer.Songs.ToPagedList(pageNumber, pageSize));
+        //}
         
 
     public ActionResult Song(int performerId, int songNumber)

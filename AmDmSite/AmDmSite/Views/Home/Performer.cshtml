@@ -4,13 +4,14 @@
 
 <style>
     #name {
-        width: 85%;
+       width : 87%;
+       text-align: left;
+    }
+    #views{
+        text-align:center;
     }
 
-    #views {
-        width: 15%;
-        text-align: center;
-    }
+
 </style>
 <div style="position: absolute; left: 50%;">
   <span id="notification" style="color:red;font-size:15px; position: relative; left: -50%;"></span>
@@ -26,15 +27,14 @@
 <br />
 <div class="h1__info">Список композиций</div>
 <table class="items">
-    <thead><tr class="top_label">
-        <th colspan="2">
-        Композиция
-        @(Html.ActionLink("A-z", "Index", "Home", new { ViewBag.Page, column = 1, typeAscending = ViewBag.NameType }, null))
-        </th>
-        <th class="number">
-        Просмотров
-            @(Html.ActionLink("⇅", "Index", "Home", new { ViewBag.Page, column = 2, typeAscending = ViewBag.SongsType }, null))
-        </th>
+    <thead>
+        <tr class="top_label">
+            <th colspan="2" id="name">
+                Композиция @(Html.ActionLink("A-z", "Performer", "Home", new { performerId = ViewBag.PerformerId, page = ViewBag.Page, column = 1, typeAscending = ViewBag.NameType }, null))
+            </th>
+            <th class="number" id="view">
+                Просмотров @(Html.ActionLink("⇅", "Performer", "Home", new { performerId = ViewBag.PerformerId, page = ViewBag.Page, column = 2, typeAscending = ViewBag.SongsType }, null))
+            </th>
         </tr>
     </thead>
 
@@ -45,6 +45,7 @@
                 <td class="artist_name" id="name">
                     @(Html.ActionLink(song.Name, "Song", "Home", new { performerId = song.PerformerId, songNumber = song.Number }, null))
                 </td>
+                <td></td>
                 <td class="number" id="views">@song.ViewsCount</td>
             </tr>
         }
