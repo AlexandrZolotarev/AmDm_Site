@@ -211,7 +211,6 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="HtmlParser\HtmlAmDmParser.cs" />
     <Compile Include="Migrations\201705082106534_ssss.cs" />
     <Compile Include="Migrations\201705082106534_ssss.Designer.cs">
       <DependentUpon>201705082106534_ssss.cs</DependentUpon>

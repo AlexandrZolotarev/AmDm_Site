@@ -37,5 +37,18 @@ namespace AmDmSite.Cache
             MemoryCache memoryCache = MemoryCache.Default;
             memoryCache.Contains(id.ToString());
         }
+
+        public void UpdateLastPerformerId(int value)
+        {
+            MemoryCache memoryCache = MemoryCache.Default;
+            memoryCache.Set("perf", value, DateTime.Now.AddMinutes(90));
+        }
+
+        public int GetLastPerformerId()
+        {
+            MemoryCache memoryCache = MemoryCache.Default;
+            return (int)memoryCache.Get("perf");
+        }
+        
     }
 }

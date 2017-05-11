@@ -1,5 +1,4 @@
-﻿using AmDmSite.HtmlParser;
-using AmDmSite.Hubs;
+﻿using AmDmSite.Hubs;
 using AmDmSite.Models.SiteDataBase;
 using PagedList;
 using System;
@@ -35,6 +34,8 @@ namespace AmDmSite.Controllers
             ViewBag.NameType = 0;
             ViewBag.SongsType = 0;
             ViewBag.ViewsCountType = 0;
+            ViewBag.Collumn = colNumber;
+            ViewBag.AscendType = ascendType;
 
             if (ascendType == -1)
                 return View(performers.ToPagedList(pageNumber, pageSize));
@@ -81,9 +82,10 @@ namespace AmDmSite.Controllers
 
         public ActionResult Performer(int? performerId, int? page, int? column, int? typeAscending)
         {
-
-            if (performerId == null)
-                return RedirectToAction("Index");
+            if (performerId == null || performerId == 0)
+                performerId = cache.GetLastPerformerId();
+            else
+                cache.UpdateLastPerformerId((int)performerId);
             SiteContext siteDataBase = new SiteContext();
             Performer performer = siteDataBase.Performers.FirstOrDefault(x => x.Id == performerId);
             ViewBag.PerformerName = performer.Name;
@@ -100,6 +102,8 @@ namespace AmDmSite.Controllers
             ViewBag.NameType = 0;
             ViewBag.SongsType = 0;
             ViewBag.ViewsCountType = 0;
+            ViewBag.Collumn = colNumber;
+            ViewBag.AscendType = ascendType;
 
             if (ascendType == -1)
                 return View(performer.Songs.ToPagedList(pageNumber, pageSize));
