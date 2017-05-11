@@ -1,4 +1,4 @@
-namespace PerformersUpdater
+namespace PerformersUpdater.Models
 {
     using System;
     using System.Collections.Generic;
@@ -11,7 +11,7 @@ namespace PerformersUpdater
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Performer()
         {
-            Songs = new HashSet<Song>();
+            Songs = new HashSet<Songs>();
         }
 
         public int Id { get; set; }
@@ -24,7 +24,9 @@ namespace PerformersUpdater
 
         public int ViewsCount { get; set; }
 
+        public int? SongsCount { get; set; }
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Song> Songs { get; set; }
+        public virtual ICollection<Songs> Songs { get; set; }
     }
 }

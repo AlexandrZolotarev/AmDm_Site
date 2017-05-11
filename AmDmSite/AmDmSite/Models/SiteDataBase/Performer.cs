@@ -13,6 +13,7 @@ namespace AmDmSite.Models.SiteDataBase
         public string PathToPhoto { get; set; }
         public virtual ICollection<Song> Songs { get; set; }
         public int ViewsCount { get; set; }
+        public int? SongsCount { get; set; }
         public Performer()
         {
             Songs = new List<Song>();

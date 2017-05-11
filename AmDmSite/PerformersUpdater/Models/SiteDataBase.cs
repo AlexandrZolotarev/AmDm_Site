@@ -1,4 +1,4 @@
-namespace PerformersUpdater
+namespace PerformersUpdater.Models
 {
     using System;
     using System.Data.Entity;
@@ -15,7 +15,7 @@ namespace PerformersUpdater
         public virtual DbSet<C__MigrationHistory> C__MigrationHistory { get; set; }
         public virtual DbSet<Accord> Accords { get; set; }
         public virtual DbSet<Performer> Performers { get; set; }
-        public virtual DbSet<Song> Songs { get; set; }
+        public virtual DbSet<Songs> Songs { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

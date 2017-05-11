@@ -413,3 +413,4 @@ D:\AmDm_Site\AmDmSite\AmDmSite\bin\Microsoft.AspNet.SignalR.Core.xml
 D:\AmDm_Site\AmDmSite\AmDmSite\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
 D:\AmDm_Site\AmDmSite\AmDmSite\bin\NLog.xml
 D:\AmDm_Site\AmDmSite\AmDmSite\obj\Debug\AmDmSite.Migrations.ssss.resources
+D:\AmDm_Site\AmDmSite\AmDmSite\obj\Debug\AmDmSite.Migrations.Songscounteradded.resources

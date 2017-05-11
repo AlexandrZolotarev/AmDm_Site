@@ -1,5 +1,6 @@
 ﻿using HtmlAgilityPack;
 using NLog;
+using PerformersUpdater.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -92,9 +93,9 @@ namespace PerformersUpdater
             }
         }
 
-        public static List<Song> GetPerformerSongsInfo(string linkToSongs)
+        public static List<Songs> GetPerformerSongsInfo(string linkToSongs)
         {
-            List<Song> songs = new List<Song>();
+            List<Songs> songs = new List<Songs>();
             System.Net.WebClient web = new System.Net.WebClient();
             web.Encoding = UTF8Encoding.UTF8;
 
@@ -123,7 +124,7 @@ namespace PerformersUpdater
                         {
                             if (rows[i].SelectNodes(".//a")[0].Attributes[1].Value.Equals("g-link"))
                             {
-                                Song song = new Song();
+                                Songs song = new Songs();
                                 song.Name = rows[i].SelectNodes(".//a")[0].InnerText.Trim();
                                 song = GetSongInfo("https:" + rows[i].SelectNodes(".//a")[0].Attributes[0].Value, song);
                                 Console.WriteLine("_________________________________________");
@@ -144,14 +145,15 @@ namespace PerformersUpdater
             Console.WriteLine("Checking performer " + performer.Name);
             performer.Songs = GetPerformerSongsInfo("https:" + rows[i].SelectNodes(".//a")[1].Attributes[0].Value, performer);
             s.Performers.FirstOrDefault(x => x.Name.Equals(name)).Songs = performer.Songs;
+            s.Performers.FirstOrDefault(x => x.Name.Equals(name)).SongsCount = performer.Songs.Count;
             s.SaveChanges();
             Console.WriteLine("Complete checking performer " + performer.Name);
             Thread.Sleep(800);
         }
 
-        public static List<Song> GetPerformerSongsInfo(string linkToSongs, Performer performer)
+        public static List<Songs> GetPerformerSongsInfo(string linkToSongs, Performer performer)
         {
-            List<Song> songs = performer.Songs.ToList();
+            List<Songs> songs = performer.Songs.ToList();
             System.Net.WebClient web = new System.Net.WebClient();
             web.Encoding = UTF8Encoding.UTF8;
             string str = web.DownloadString(linkToSongs);
@@ -189,10 +191,10 @@ namespace PerformersUpdater
             return songs;
         }
 
-        private static int UpdateSong(Performer performer, List<Song> songs, HtmlNodeCollection rows, int updatedSongsCount, int i)
+        private static int UpdateSong(Performer performer, List<Songs> songs, HtmlNodeCollection rows, int updatedSongsCount, int i)
         {
             int songsCounter=0;
-            Song song = new Song();
+            Songs song = new Songs();
             song.Name = rows[i].SelectNodes(".//a")[0].InnerText.Trim();
             song = GetSongInfo("https:" + rows[i].SelectNodes(".//a")[0].Attributes[0].Value, song);
             song.Number = i;
@@ -204,7 +206,7 @@ namespace PerformersUpdater
             return updatedSongsCount;
         }
 
-        public static Song GetSongInfo(string linkToInfo, Song song)
+        public static Songs GetSongInfo(string linkToInfo, Songs songs)
         {
             Thread.Sleep(750);
             System.Net.WebClient web = new System.Net.WebClient();
@@ -214,24 +216,24 @@ namespace PerformersUpdater
             HtmlDocument siteHtml = new HtmlDocument();
             siteHtml.LoadHtml(str);
             var info = siteHtml.DocumentNode.SelectNodes(".//pre");
-            song.Text = info[0].InnerText.Trim();
+            songs.Text = info[0].InnerText.Trim();
             var accordImages = siteHtml.GetElementbyId("song_chords").SelectNodes(".//img");
             if (accordImages != null)
                 foreach (var accordImage in accordImages)
                 {
                     if (!accords.Exists(x => x.PathToPicture.Equals(accordImage.Attributes[0].Value)))
                     {
-                        UpdateAccord(song, accordImage);
+                        UpdateAccord(songs, accordImage);
                     }
                     else
                     {
-                        song.Accords.Add(accords.Find(x => x.PathToPicture.Equals(accordImage.Attributes[0].Value)));
+                        songs.Accords.Add(accords.Find(x => x.PathToPicture.Equals(accordImage.Attributes[0].Value)));
                     }
                 }
-            return song;
+            return songs;
         }
 
-        private static void UpdateAccord(Song song, HtmlNode accordImage)
+        private static void UpdateAccord(Songs song, HtmlNode accordImage)
         {
             Accord accord = new Accord() { PathToPicture = accordImage.Attributes[0].Value };
             Regex rgx = new Regex(@"([^/]+)(?=_[^_]*$)");

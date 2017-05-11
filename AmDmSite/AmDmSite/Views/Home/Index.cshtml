@@ -44,7 +44,7 @@
                 <td class="artist_name" id="name">
                     @(Html.ActionLink(performer.Name, "Performer", "Home", new { performerId = performer.Id }, null))
                 </td>
-                <td class="number" id="counter">@performer.Songs.Count </td>
+                <td class="number" id="counter">@performer.SongsCount </td>
                 <td class="number" id="views">@performer.ViewsCount</td>
             </tr>
         }

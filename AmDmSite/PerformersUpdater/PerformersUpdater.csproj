@@ -98,15 +98,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\Accord.cs" />
     <Compile Include="C__MigrationHistory.cs" />
+    <Compile Include="Models\Accord.cs" />
+    <Compile Include="Models\C__MigrationHistory.cs" />
+    <Compile Include="Models\SiteDataBase.cs" />
     <Compile Include="Models\Performer.cs" />
+    <Compile Include="Models\Songs.cs" />
     <Compile Include="ParserContainer.cs" />
     <Compile Include="PerformersHtmlParser.cs" />
     <Compile Include="PerformersHtmlUpdater.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Models\SiteDataBase.cs" />
-    <Compile Include="Models\Song.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Scripts\jquery-1.6.4-vsdoc.js" />
@@ -128,6 +129,9 @@
       <Project>{399ae1fa-9e57-4d05-8bbd-292ef7ff5196}</Project>
       <Name>AmDmSite</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

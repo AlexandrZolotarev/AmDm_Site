@@ -1,4 +1,4 @@
-namespace PerformersUpdater
+namespace PerformersUpdater.Models
 {
     using System;
     using System.Collections.Generic;
@@ -6,10 +6,10 @@ namespace PerformersUpdater
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    public partial class Song
+    public partial class Songs
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Song()
+        public Songs()
         {
             Accords = new HashSet<Accord>();
         }

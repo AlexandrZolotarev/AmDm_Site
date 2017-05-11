@@ -97,7 +97,6 @@ namespace AmDmSite.Controllers
             int ascendType = (typeAscending ?? -1);
             if (pageNumber == 1) performer.ViewsCount++;
             siteDataBase.SaveChanges();
-
             ViewBag.Page = pageNumber;
             ViewBag.NameType = 0;
             ViewBag.SongsType = 0;
