@@ -24,8 +24,14 @@ namespace AmDmSite.Controllers
 
         public ActionResult Index(int? page, int? column, int? typeAscending)
         {
+
             SiteContext s = new SiteContext();
-            List<Performer> performers = new List<Performer>(s.Performers);
+            List<Performer> performers = cache.GetPerformers();
+            if (performers == null)
+            {
+                performers = new List<Performer>(s.Performers);
+                cache.UpdatePerformers(performers);
+            }
             int pageSize = 10;
             int pageNumber = (page ?? 1);
             int colNumber = (column ?? 0);
@@ -57,12 +63,12 @@ namespace AmDmSite.Controllers
                     if (ascendType == 0)
                     {
                         ViewBag.SongsType = 1;
-                        return View(performers.OrderBy(x => x.Songs.Count).ToPagedList(pageNumber, pageSize));
+                        return View(performers.OrderBy(x => x.SongsCount).ToPagedList(pageNumber, pageSize));
                     }
                     else
                     {
                         ViewBag.SongsType = 0;
-                        return View(performers.OrderByDescending(x => x.Songs.Count).ToPagedList(pageNumber, pageSize));
+                        return View(performers.OrderByDescending(x => x.SongsCount).ToPagedList(pageNumber, pageSize));
                     }
                 case 3:
 
@@ -87,7 +93,12 @@ namespace AmDmSite.Controllers
             else
                 cache.UpdateLastPerformerId((int)performerId);
             SiteContext siteDataBase = new SiteContext();
-            Performer performer = siteDataBase.Performers.FirstOrDefault(x => x.Id == performerId);
+            Performer performer = cache.GetPerformers().FirstOrDefault(x => x.Id == performerId);
+            if (performer == null)
+            {
+                cache.UpdatePerformers(siteDataBase.Performers.ToList());
+                performer = cache.GetPerformers().FirstOrDefault(x => x.Id == performerId);
+            }
             ViewBag.PerformerName = performer.Name;
             ViewBag.PerformerBiography = performer.Biography;
             ViewBag.PerformerId = performerId;
@@ -214,7 +225,9 @@ namespace AmDmSite.Controllers
         [HttpGet]
         public void SendPushMessage(string message)
         {
-            var context = Microsoft.AspNet.SignalR.GlobalHost.ConnectionManager.GetHubContext<NotificationHub>();
+            SiteContext siteDataBase = new SiteContext();
+            cache.UpdatePerformers(siteDataBase.Performers.ToList());
+                var context = Microsoft.AspNet.SignalR.GlobalHost.ConnectionManager.GetHubContext<NotificationHub>();
             context.Clients.All.displayMessage(message);
         }
     }
