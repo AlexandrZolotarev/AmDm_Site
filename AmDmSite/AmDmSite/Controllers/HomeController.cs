@@ -168,9 +168,10 @@ namespace AmDmSite.Controllers
             performer = siteDataBase.Performers.FirstOrDefault(x => x.Id == performerId);
             cache.Add(performer);
         }
-        Song song = performer.Songs.FirstOrDefault(x => x.Number == songNumber);
-        song.ViewsCount++;
+            Song song = siteDataBase.Songs.FirstOrDefault(x => x.Number == songNumber && x.PerformerId == performerId);
+            song.ViewsCount++;
         siteDataBase.SaveChanges();
+            cache.Update(performer);
         ViewBag.NextSong = performer.Songs.Count > song.Number + 1 ? song.Number + 1 : -1;
         ViewBag.PreviousSong = song.Number > 1 ? song.Number - 1 : -1;
         return View(song);
@@ -185,9 +186,10 @@ namespace AmDmSite.Controllers
                 performer = siteDataBase.Performers.FirstOrDefault(x => x.Id == performerId);
                 cache.Add(performer);
             }
-            Song song = performer.Songs.FirstOrDefault(x => x.Number == songNumber);
+            Song song = siteDataBase.Songs.FirstOrDefault(x => x.Number == songNumber && x.PerformerId == performerId);
             song.ViewsCount++;
             siteDataBase.SaveChanges();
+            cache.Update(performer);
             ViewBag.NextSong = performer.Songs.Count > song.Number + 1 ? song.Number + 1 : -1;
             ViewBag.PreviousSong = song.Number > 1 ? song.Number - 1 : -1;
             return PartialView(song);
@@ -230,5 +232,13 @@ namespace AmDmSite.Controllers
                 var context = Microsoft.AspNet.SignalR.GlobalHost.ConnectionManager.GetHubContext<NotificationHub>();
             context.Clients.All.displayMessage(message);
         }
+
+        public ActionResult GetTag()
+        {
+            SiteContext siteDataBase = new SiteContext();
+            var token = string.Join(",", siteDataBase.Accords.ToList().Select(x => x.Name).ToList());
+            return Json(new { data = token.ToString().Split(',') }, JsonRequestBehavior.AllowGet);
+        }
+
     }
 }

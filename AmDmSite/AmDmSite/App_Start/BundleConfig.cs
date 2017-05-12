@@ -23,6 +23,14 @@ namespace AmDmSite
                       "~/Scripts/bootstrap.js",
                       "~/Scripts/respond.js"));
 
+            bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
+                     "~/Scripts/bootstrap.js", "~/Scripts/typeahead.bundle.js",
+                     "~/Scripts/bootstrap-tokenfield.min.js",
+                     "~/Scripts/bootstrap-tokenfield.js",
+                     "~/Scripts/bootstrap.min.js",
+                     "~/Scripts/jquery-2.1.1.min.js",
+                     "~/Scripts/respond.js"));
+
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
