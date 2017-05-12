@@ -32,7 +32,7 @@ namespace AmDmSite.Controllers
                 performers = new List<Performer>(s.Performers);
                 cache.UpdatePerformers(performers);
             }
-            int pageSize = 10;
+            int pageSize = 20;
             int pageNumber = (page ?? 1);
             int colNumber = (column ?? 0);
             int ascendType = (typeAscending ?? -1);

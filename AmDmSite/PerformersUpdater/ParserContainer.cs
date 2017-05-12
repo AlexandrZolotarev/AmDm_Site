@@ -46,9 +46,9 @@ namespace PerformersUpdater
                         }
                         Thread.Sleep(800);
                     }
-                    catch (Exception exception)
+                    catch 
                     {
-                        logger.Fatal("Page " + page + ", " + exception.Message);
+
                     }
                 }
             }
